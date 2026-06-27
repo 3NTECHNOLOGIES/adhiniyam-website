@@ -1,37 +1,21 @@
 Adhiniyam MVP Website Package
 
-Upload the extracted files and folders to your GitHub repo, not the ZIP itself.
+Updated contact settings:
+- Email: enquiry@adhiniyam.com
+- Contact form endpoint: https://formspree.io/f/xpqgdvew
+- No WhatsApp number displayed for now
+- No address displayed
+- Refund requests are based on sole discretion
 
-Important placeholders to update before launch:
-- Contact email in /contact/ and policy pages
-- WhatsApp number in /contact/ and CTA links
-- Address, if you want to show it
-- Refund timeline
-- Jurisdiction in Terms page
-- Form provider link or embed
+How to deploy updates:
+1. Upload these updated files/folders to the existing GitHub repository.
+2. Commit changes.
+3. Vercel will redeploy automatically.
 
-Vercel settings:
-Framework Preset: Other
-Root Directory: ./
-Build Command: blank
-Output Directory: blank
-Install Command: blank
-
-Main live pages:
-/
-/tools/
-/tools/salary-slip-generator/
-/tools/invoice-generator/
-/services/
-/services/gst-registration/
-/services/trademark-registration/
-/services/company-registration/
-/services/payroll-support/
-/services/custom-business-tools/
-/blog/
-/about/
-/contact/
-/privacy-policy/
-/terms/
-/refund-policy/
-/disclaimer/
+Important folders:
+/assets/ - CSS, JS and JSON data
+/tools/ - tool pages
+/services/ - service pages
+/blog/ - blog pages
+/contact/ - contact form page
+/policy folders/ - privacy, terms, refund and disclaimer
