@@ -95,7 +95,7 @@ async function renderBlogPage() {
   const blogs = (await loadJson('/assets/blogs.json', ADHINIYAM.fallbackBlogs)).sort((a,b)=>a.order-b.order);
   wrap.innerHTML = blogs.map(blogCard).join('');
 }
-function copycontact formTemplate() {
+function copyEnquiryTemplate() {
   const msg = 'Hi Adhiniyam, I need help with [service/tool name]. My requirement is: [brief requirement].';
   navigator.clipboard?.writeText(msg); alert('Message template copied.');
 }
