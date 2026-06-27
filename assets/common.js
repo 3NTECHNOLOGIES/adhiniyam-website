@@ -1,0 +1,102 @@
+
+const ADHINIYAM = {
+  fallbackTools: [{"name": "Salary Slip Generator", "slug": "salary-slip-generator", "category": "HR & Payroll", "status": "Live", "description": "Create single and bulk salary slips online with professional PDF export.", "url": "/tools/salary-slip-generator/", "cta": "Use Tool", "relatedService": "Payroll Support", "relatedServiceUrl": "/services/payroll-support/", "tag": "Popular", "icon": "Payslip", "order": 1, "showOnHome": true}, {"name": "Invoice Generator", "slug": "invoice-generator", "category": "Business Tools", "status": "Live", "description": "Create GST and non-GST invoices online with tax calculation and PDF download.", "url": "/tools/invoice-generator/", "cta": "Use Tool", "relatedService": "GST Registration & Filing", "relatedServiceUrl": "/services/gst-registration/", "tag": "Popular", "icon": "Invoice", "order": 2, "showOnHome": true}, {"name": "GST Calculator", "slug": "gst-calculator", "category": "Tax & Compliance", "status": "Coming Soon", "description": "Calculate GST amount, taxable value, total invoice value and tax breakup quickly.", "url": "#", "cta": "Coming Soon", "relatedService": "GST Registration & Filing", "relatedServiceUrl": "/services/gst-registration/", "tag": "Coming Soon", "icon": "GST", "order": 3, "showOnHome": true}, {"name": "TDS Calculator", "slug": "tds-calculator", "category": "Tax & Compliance", "status": "Coming Soon", "description": "Calculate TDS deduction and net payable amount for salary, contractors, rent and professional fees.", "url": "#", "cta": "Coming Soon", "relatedService": "GST & Tax Compliance", "relatedServiceUrl": "/services/", "tag": "Coming Soon", "icon": "TDS", "order": 4, "showOnHome": true}, {"name": "PF / ESIC Calculator", "slug": "pf-esic-calculator", "category": "HR & Payroll", "status": "Coming Soon", "description": "Calculate employee and employer contribution for PF and ESIC based on salary details.", "url": "#", "cta": "Coming Soon", "relatedService": "Payroll Support", "relatedServiceUrl": "/services/payroll-support/", "tag": "Coming Soon", "icon": "Payroll", "order": 5, "showOnHome": true}, {"name": "Offer Letter Generator", "slug": "offer-letter-generator", "category": "HR & Payroll", "status": "Coming Soon", "description": "Create professional offer letters and appointment documents for new employees.", "url": "#", "cta": "Coming Soon", "relatedService": "Payroll Support", "relatedServiceUrl": "/services/payroll-support/", "tag": "Coming Soon", "icon": "Letter", "order": 6, "showOnHome": true}, {"name": "Quotation Generator", "slug": "quotation-generator", "category": "Business Tools", "status": "Coming Soon", "description": "Prepare professional quotations for clients with item details, pricing and terms.", "url": "#", "cta": "Coming Soon", "relatedService": "Custom Business Tools", "relatedServiceUrl": "/services/custom-business-tools/", "tag": "Coming Soon", "icon": "Quote", "order": 7, "showOnHome": false}, {"name": "Purchase Order Generator", "slug": "purchase-order-generator", "category": "Business Tools", "status": "Coming Soon", "description": "Create purchase orders for vendors and suppliers.", "url": "#", "cta": "Coming Soon", "relatedService": "Business Compliance", "relatedServiceUrl": "/services/", "tag": "Coming Soon", "icon": "PO", "order": 8, "showOnHome": false}, {"name": "Receipt Generator", "slug": "receipt-generator", "category": "Business Tools", "status": "Coming Soon", "description": "Generate payment receipts for customers and clients.", "url": "#", "cta": "Coming Soon", "relatedService": "Business Compliance", "relatedServiceUrl": "/services/", "tag": "Coming Soon", "icon": "Receipt", "order": 9, "showOnHome": false}, {"name": "Experience Letter Generator", "slug": "experience-letter-generator", "category": "HR & Payroll", "status": "Coming Soon", "description": "Create professional employee experience letters.", "url": "#", "cta": "Coming Soon", "relatedService": "Payroll Support", "relatedServiceUrl": "/services/payroll-support/", "tag": "Coming Soon", "icon": "Experience", "order": 10, "showOnHome": false}, {"name": "Appointment Letter Generator", "slug": "appointment-letter-generator", "category": "HR & Payroll", "status": "Coming Soon", "description": "Generate appointment letters with employment terms.", "url": "#", "cta": "Coming Soon", "relatedService": "Payroll Support", "relatedServiceUrl": "/services/payroll-support/", "tag": "Coming Soon", "icon": "Appointment", "order": 11, "showOnHome": false}, {"name": "Rent Agreement Draft Generator", "slug": "rent-agreement-draft-generator", "category": "Legal & Documents", "status": "Coming Soon", "description": "Create a basic rent agreement draft.", "url": "#", "cta": "Coming Soon", "relatedService": "Business Compliance", "relatedServiceUrl": "/services/", "tag": "Coming Soon", "icon": "Agreement", "order": 12, "showOnHome": false}, {"name": "Board Resolution Generator", "slug": "board-resolution-generator", "category": "Legal & Documents", "status": "Coming Soon", "description": "Generate basic board resolution formats.", "url": "#", "cta": "Coming Soon", "relatedService": "Company Registration", "relatedServiceUrl": "/services/company-registration/", "tag": "Coming Soon", "icon": "Resolution", "order": 13, "showOnHome": false}, {"name": "NDA Generator", "slug": "nda-generator", "category": "Legal & Documents", "status": "Coming Soon", "description": "Prepare a simple non-disclosure agreement draft.", "url": "#", "cta": "Coming Soon", "relatedService": "Business Compliance", "relatedServiceUrl": "/services/", "tag": "Coming Soon", "icon": "NDA", "order": 14, "showOnHome": false}],
+  fallbackServices: [{"name": "GST Registration & Filing", "slug": "gst-registration", "category": "GST & Tax Compliance", "status": "Live", "description": "Support for GST registration, GST return filing, LUT filing, GST notices and regular GST compliance.", "url": "/services/gst-registration/", "cta": "Get GST Support", "relatedTool": "Invoice Generator", "relatedToolUrl": "/tools/invoice-generator/", "icon": "GST", "order": 1, "showOnHome": true}, {"name": "Company Registration", "slug": "company-registration", "category": "Business Registration", "status": "Live", "description": "Support for Private Limited Company, LLP, Partnership Firm, Section 8 Company and business setup requirements.", "url": "/services/company-registration/", "cta": "Register Business", "relatedTool": "Invoice Generator", "relatedToolUrl": "/tools/invoice-generator/", "icon": "Company", "order": 2, "showOnHome": true}, {"name": "Trademark Registration", "slug": "trademark-registration", "category": "Trademark & Brand Protection", "status": "Live", "description": "Support for trademark search, application filing, objection reply and brand protection guidance.", "url": "/services/trademark-registration/", "cta": "Protect Brand", "relatedTool": "Business Tools", "relatedToolUrl": "/tools/", "icon": "Trademark", "order": 3, "showOnHome": true}, {"name": "Payroll Support", "slug": "payroll-support", "category": "HR & Payroll Support", "status": "Live", "description": "Support for salary slips, payroll sheets, PF/ESIC calculations, HR documents and employee formats.", "url": "/services/payroll-support/", "cta": "Get Payroll Help", "relatedTool": "Salary Slip Generator", "relatedToolUrl": "/tools/salary-slip-generator/", "icon": "Payroll", "order": 4, "showOnHome": true}, {"name": "Business Compliance", "slug": "business-compliance", "category": "Business Compliance", "status": "Overview", "description": "Support for ROC filings, MSME registration, FSSAI registration, IEC, professional tax and business compliance.", "url": "/services/", "cta": "View Compliance Services", "relatedTool": "Business Document Tools", "relatedToolUrl": "/tools/", "icon": "Compliance", "order": 5, "showOnHome": true}, {"name": "Custom Business Tools", "slug": "custom-business-tools", "category": "Custom Tool Development", "status": "Live", "description": "Get a private branded invoice, salary slip, HR document or Excel-to-PDF automation tool for your business.", "url": "/services/custom-business-tools/", "cta": "Request Custom Tool", "relatedTool": "Free Tools", "relatedToolUrl": "/tools/", "icon": "Custom", "order": 6, "showOnHome": true}],
+  fallbackBlogs: [{"title": "How to Create a GST Invoice Online", "slug": "how-to-create-gst-invoice-online", "category": "GST & Tax", "excerpt": "Learn how to create a GST invoice with seller details, customer details, item table, GST breakup and PDF format.", "url": "/blog/how-to-create-gst-invoice-online/", "readingTime": "5 min read", "relatedTool": "Invoice Generator", "relatedToolUrl": "/tools/invoice-generator/", "relatedService": "GST Registration & Filing", "relatedServiceUrl": "/services/gst-registration/", "status": "Live", "order": 1, "showOnHome": true}, {"title": "What is a Salary Slip and Why is it Important?", "slug": "what-is-a-salary-slip", "category": "Payroll & HR", "excerpt": "Understand salary slip components, paid days, earnings, deductions, net salary and why salary slips matter.", "url": "/blog/what-is-a-salary-slip/", "readingTime": "4 min read", "relatedTool": "Salary Slip Generator", "relatedToolUrl": "/tools/salary-slip-generator/", "relatedService": "Payroll Support", "relatedServiceUrl": "/services/payroll-support/", "status": "Live", "order": 2, "showOnHome": true}, {"title": "Documents Required for GST Registration", "slug": "documents-required-for-gst-registration", "category": "GST & Compliance", "excerpt": "Know the common documents and details usually required for GST registration in India.", "url": "/blog/documents-required-for-gst-registration/", "readingTime": "6 min read", "relatedTool": "Invoice Generator", "relatedToolUrl": "/tools/invoice-generator/", "relatedService": "GST Registration & Filing", "relatedServiceUrl": "/services/gst-registration/", "status": "Live", "order": 3, "showOnHome": true}, {"title": "How to Register a Trademark in India", "slug": "how-to-register-a-trademark-in-india", "category": "Trademark & Brand", "excerpt": "Understand the basic trademark registration process and why brand protection matters for businesses.", "url": "/blog/how-to-register-a-trademark-in-india/", "readingTime": "6 min read", "relatedTool": "Business Tools", "relatedToolUrl": "/tools/", "relatedService": "Trademark Registration", "relatedServiceUrl": "/services/trademark-registration/", "status": "Live", "order": 4, "showOnHome": true}, {"title": "Company Registration Process in India", "slug": "company-registration-process-in-india", "category": "Business Registration", "excerpt": "Learn the basic steps, documents and structure options involved in registering a company or business entity in India.", "url": "/blog/company-registration-process-in-india/", "readingTime": "7 min read", "relatedTool": "Invoice Generator", "relatedToolUrl": "/tools/invoice-generator/", "relatedService": "Company Registration", "relatedServiceUrl": "/services/company-registration/", "status": "Live", "order": 5, "showOnHome": false}]
+};
+async function loadJson(path, fallback) {
+  try { const res = await fetch(path); if(!res.ok) throw new Error('fetch failed'); return await res.json(); }
+  catch(e) { return fallback; }
+}
+function iconText(label) { return (label || 'A').split(/\s|\//).filter(Boolean).map(x=>x[0]).join('').slice(0,2).toUpperCase(); }
+function statusClass(status) { return status === 'Live' ? 'live' : ((status||'').includes('Soon') || (status||'').includes('Later')) ? 'soon' : 'info'; }
+function cardButton(item) {
+  const isLive = item.status === 'Live' || (item.url && item.url !== '#');
+  const cls = isLive ? 'btn primary' : 'btn secondary';
+  return `<a class="${cls}" href="${item.url || '#'}">${item.cta || (isLive ? 'Open' : 'Coming Soon')}</a>`;
+}
+function toolCard(t) {
+  return `<article class="card tool-card" data-name="${t.name.toLowerCase()}" data-category="${t.category}" data-status="${t.status}" data-tag="${t.tag || ''}">
+    <div class="card-top"><div class="icon-bubble">${iconText(t.icon || t.name)}</div><span class="badge ${statusClass(t.status)}">${t.status}</span></div>
+    <h3>${t.name}</h3><p>${t.description}</p>
+    <div class="meta">${t.category} · Related: <a href="${t.relatedServiceUrl}">${t.relatedService}</a></div>
+    <div class="btn-row">${cardButton(t)}${t.relatedServiceUrl ? `<a class="btn secondary" href="${t.relatedServiceUrl}">Get Support</a>` : ''}</div>
+  </article>`;
+}
+function serviceCard(s) {
+  return `<article class="card service-card" data-category="${s.category}">
+    <div class="card-top"><div class="icon-bubble">${iconText(s.icon || s.name)}</div><span class="badge info">${s.category}</span></div>
+    <h3>${s.name}</h3><p>${s.description}</p>
+    <div class="meta">Related tool: <a href="${s.relatedToolUrl}">${s.relatedTool}</a></div>
+    <div class="btn-row"><a class="btn primary" href="${s.url}">${s.cta}</a></div>
+  </article>`;
+}
+function blogCard(b) {
+  return `<article class="card blog-card">
+    <span class="badge info">${b.category}</span>
+    <h3 style="margin-top:14px">${b.title}</h3><p>${b.excerpt}</p>
+    <div class="meta">${b.readingTime} · Tool: <a href="${b.relatedToolUrl}">${b.relatedTool}</a></div>
+    <div class="btn-row"><a class="btn primary" href="${b.url}">Read Guide</a><a class="btn secondary" href="${b.relatedServiceUrl}">Related Service</a></div>
+  </article>`;
+}
+function renderHeaderFooter() {
+  const header = document.getElementById('site-header');
+  if(header) header.innerHTML = `<div class="container nav-wrap"><a class="brand" href="/"><span class="brand-mark">A</span><span><span class="brand-name">Adhiniyam</span><span class="brand-tag">Business, Legal & Compliance Tools</span></span></a><nav class="nav-links"><a href="/">Home</a><a href="/tools/">Free Tools</a><a href="/services/">Services</a><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav><div class="header-actions"><a class="btn secondary" href="/tools/">Explore Tools</a><a class="btn green" href="/contact/">Get Support</a></div><button class="menu-btn" aria-label="Open menu">Menu</button></div>`;
+  const footer = document.getElementById('site-footer');
+  if(footer) footer.innerHTML = `<div class="container"><div class="footer-grid"><div><a class="brand" href="/" style="color:#fff"><span class="brand-mark">A</span><span><span class="brand-name">Adhiniyam</span><span class="brand-tag" style="color:#C7D7F5">Business, Legal & Compliance Tools</span></span></a><p style="margin-top:16px">Adhiniyam is a free business, legal and compliance tools platform for India. It helps businesses create documents, calculate taxes, manage HR paperwork and connect with expert compliance support.</p></div><div><h4>Free Tools</h4><a href="/tools/salary-slip-generator/">Salary Slip Generator</a><a href="/tools/invoice-generator/">Invoice Generator</a><a href="/tools/">GST Calculator</a><a href="/tools/">TDS Calculator</a><a href="/tools/">PF / ESIC Calculator</a></div><div><h4>Services</h4><a href="/services/gst-registration/">GST Registration</a><a href="/services/company-registration/">Company Registration</a><a href="/services/trademark-registration/">Trademark Registration</a><a href="/services/payroll-support/">Payroll Support</a><a href="/services/custom-business-tools/">Custom Business Tools</a></div><div><h4>Important Links</h4><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/blog/">Blog</a><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms & Conditions</a><a href="/refund-policy/">Refund Policy</a><a href="/disclaimer/">Disclaimer</a></div></div><div class="footer-bottom">The tools available on Adhiniyam are provided for general utility and informational purposes. Users should verify generated documents, calculations and compliance requirements before official use.</div></div>`;
+  const btn = document.querySelector('.menu-btn'), nav = document.querySelector('.nav-wrap');
+  if(btn && nav) btn.addEventListener('click', () => nav.classList.toggle('open'));
+  const path = location.pathname;
+  document.querySelectorAll('.nav-links a').forEach(a => { const href=a.getAttribute('href'); if((href==='/'&&path==='/') || (href!=='/'&&path.startsWith(href))) a.classList.add('active'); });
+  initFAQ();
+}
+function initFAQ() {
+  document.querySelectorAll('.faq-q').forEach(btn => btn.addEventListener('click', () => btn.closest('.faq-item').classList.toggle('open')));
+}
+async function renderHomeData() {
+  const tools = await loadJson('/assets/tools.json', ADHINIYAM.fallbackTools);
+  const services = await loadJson('/assets/services.json', ADHINIYAM.fallbackServices);
+  const blogs = await loadJson('/assets/blogs.json', ADHINIYAM.fallbackBlogs);
+  const ht = document.getElementById('homeTools'); if(ht) ht.innerHTML = tools.filter(x=>x.showOnHome).sort((a,b)=>a.order-b.order).slice(0,6).map(toolCard).join('');
+  const hs = document.getElementById('homeServices'); if(hs) hs.innerHTML = services.filter(x=>x.showOnHome).sort((a,b)=>a.order-b.order).slice(0,6).map(serviceCard).join('');
+  const hb = document.getElementById('homeBlogs'); if(hb) hb.innerHTML = blogs.filter(x=>x.showOnHome).sort((a,b)=>a.order-b.order).slice(0,4).map(blogCard).join('');
+}
+async function renderToolsPage() {
+  const wrap = document.getElementById('allToolsGrid'); if(!wrap) return;
+  const tools = (await loadJson('/assets/tools.json', ADHINIYAM.fallbackTools)).sort((a,b)=>a.order-b.order);
+  function draw(list) { wrap.innerHTML = list.map(toolCard).join('') || '<p>No matching tools found.</p>'; }
+  draw(tools);
+  const input = document.getElementById('toolSearch'), tabs = document.querySelectorAll('[data-filter]');
+  let active = 'All Tools';
+  function apply() {
+    const q = (input?.value || '').toLowerCase().trim();
+    const filtered = tools.filter(t => {
+      const matchesQ = !q || [t.name,t.description,t.category,t.relatedService,t.status,t.tag].join(' ').toLowerCase().includes(q);
+      let matchesCat = true;
+      if(active !== 'All Tools') {
+        if(active === 'Popular Tools') matchesCat = t.tag === 'Popular';
+        else if(active === 'Coming Soon') matchesCat = t.status === 'Coming Soon';
+        else matchesCat = t.category === active;
+      }
+      return matchesQ && matchesCat;
+    });
+    draw(filtered);
+  }
+  if(input) input.addEventListener('input', apply);
+  tabs.forEach(tab => tab.addEventListener('click', () => { tabs.forEach(x=>x.classList.remove('active')); tab.classList.add('active'); active = tab.dataset.filter; apply(); }));
+}
+async function renderServicesPage() {
+  const wrap = document.getElementById('servicesGrid'); if(!wrap) return;
+  const services = (await loadJson('/assets/services.json', ADHINIYAM.fallbackServices)).sort((a,b)=>a.order-b.order);
+  wrap.innerHTML = services.filter(s=>s.showOnHome).map(serviceCard).join('');
+}
+async function renderBlogPage() {
+  const wrap = document.getElementById('blogGrid'); if(!wrap) return;
+  const blogs = (await loadJson('/assets/blogs.json', ADHINIYAM.fallbackBlogs)).sort((a,b)=>a.order-b.order);
+  wrap.innerHTML = blogs.map(blogCard).join('');
+}
+function copyWhatsAppTemplate() {
+  const msg = 'Hi Adhiniyam, I need help with [service/tool name]. My requirement is: [brief requirement].';
+  navigator.clipboard?.writeText(msg); alert('WhatsApp message template copied. Replace placeholders before sending.');
+}
+document.addEventListener('DOMContentLoaded', () => { renderHeaderFooter(); renderHomeData(); renderToolsPage(); renderServicesPage(); renderBlogPage(); });
