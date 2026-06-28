@@ -24,3 +24,5 @@ SEO update added:
 - sitemap.xml
 - robots.txt
 - canonical and OG URLs use primary www domain
+
+Update: Added five new SEO blog posts for GST invoicing and HR documentation, and updated blogs.json and sitemap.xml.
