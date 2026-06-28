@@ -1,4 +1,4 @@
-Adhiniyam MVP Website Package
+Adhiniyam Website Package
 
 Updated contact settings:
 - Email: enquiry@adhiniyam.com
@@ -19,3 +19,8 @@ Important folders:
 /blog/ - blog pages
 /contact/ - contact form page
 /policy folders/ - privacy, terms, refund and disclaimer
+
+SEO update added:
+- sitemap.xml
+- robots.txt
+- canonical and OG URLs use primary www domain
