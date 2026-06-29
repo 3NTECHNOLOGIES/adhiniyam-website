@@ -56,7 +56,7 @@
     "relatedServiceUrl": "/services/",
     "tag": "Coming Soon",
     "icon": "TDS",
-    "order": 5,
+    "order": 6,
     "showOnHome": true
   },
   {
@@ -78,15 +78,15 @@
     "name": "Offer Letter Generator",
     "slug": "offer-letter-generator",
     "category": "HR & Payroll",
-    "status": "Coming Soon",
-    "description": "Create professional offer letters and appointment documents for new employees.",
-    "url": "#",
-    "cta": "Coming Soon",
+    "status": "Live",
+    "description": "Create professional employee offer letters online with role, joining date, salary, probation, notice period and PDF download.",
+    "url": "/tools/offer-letter-generator/",
+    "cta": "Use Tool",
     "relatedService": "Payroll Support",
     "relatedServiceUrl": "/services/payroll-support/",
-    "tag": "Coming Soon",
-    "icon": "Letter",
-    "order": 6,
+    "tag": "Popular",
+    "icon": "Offer",
+    "order": 5,
     "showOnHome": true
   },
   {
