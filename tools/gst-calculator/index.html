@@ -16,6 +16,100 @@ function getRate(){const rate=g('gstRate').value;return rate==='custom'?(parseFl
 function handleRateChange(){g('customRateField').style.display=g('gstRate').value==='custom'?'block':'none'}
 function calculateGST(){const amount=parseFloat(g('amount').value)||0;const rate=getRate();const mode=g('calcMode').value;const type=g('gstType').value;let taxable=0,gst=0,total=0;if(mode==='exclusive'){taxable=amount;gst=taxable*rate/100;total=taxable+gst}else{total=amount;taxable=rate? total*100/(100+rate):total;gst=total-taxable}const half=gst/2;let taxHtml='';if(type==='cgst-sgst'){taxHtml=`<div class="total-line"><span>CGST @ ${(rate/2).toFixed(2)}%</span><b>${money(half)}</b></div><div class="total-line"><span>SGST @ ${(rate/2).toFixed(2)}%</span><b>${money(half)}</b></div>`}else{taxHtml=`<div class="total-line"><span>IGST @ ${rate.toFixed(2)}%</span><b>${money(gst)}</b></div>`}g('gstResult').innerHTML=`<div class="total-line"><span>Taxable Value</span><b>${money(taxable)}</b></div><div class="total-line"><span>Total GST @ ${rate.toFixed(2)}%</span><b>${money(gst)}</b></div>${taxHtml}<div class="total-line grand"><span>Total Invoice Value</span><b>${money(total)}</b></div>`;g('gstPreview').innerHTML=`<div style="max-width:760px;margin:auto;border:1px solid #D9E6FB;background:white;padding:18px;border-radius:12px"><h2>GST Calculation Summary</h2><p><b>Note:</b> ${g('note').value||'GST calculation'}<br><b>Mode:</b> ${mode==='exclusive'?'Add GST to taxable amount':'Remove GST from GST-inclusive amount'}<br><b>GST Type:</b> ${type==='cgst-sgst'?'CGST + SGST':'IGST'}</p><hr><p><b>Taxable Value:</b> ${money(taxable)}<br><b>GST Amount:</b> ${money(gst)}<br><b>Total Invoice Value:</b> ${money(total)}</p><p style="font-size:13px;color:#60708D">Verify rate, place of supply and tax treatment before official use.</p></div>`;return {amount,rate,mode,type,taxable,gst,total}}
 function resetGST(){g('calcMode').value='exclusive';g('amount').value='10000';g('gstRate').value='18';g('gstType').value='cgst-sgst';g('note').value='GST calculation';handleRateChange();calculateGST()}
-function downloadGSTPDF(){const r=calculateGST();const {jsPDF}=window.jspdf;const doc=new jsPDF();let y=18;doc.setFontSize(18);doc.text('Adhiniyam GST Calculation Summary',14,y);y+=12;doc.setFontSize(11);doc.text('Note: '+(g('note').value||'GST calculation'),14,y);y+=8;doc.text('Mode: '+(r.mode==='exclusive'?'Add GST to taxable amount':'Remove GST from GST-inclusive amount'),14,y);y+=8;doc.text('GST Type: '+(r.type==='cgst-sgst'?'CGST + SGST':'IGST'),14,y);y+=10;doc.line(14,y,196,y);y+=10;doc.setFontSize(12);doc.text('Taxable Value: '+money(r.taxable),14,y);y+=8;doc.text('Total GST @ '+r.rate.toFixed(2)+'%: '+money(r.gst),14,y);y+=8;if(r.type==='cgst-sgst'){doc.text('CGST @ '+(r.rate/2).toFixed(2)+'%: '+money(r.gst/2),14,y);y+=8;doc.text('SGST @ '+(r.rate/2).toFixed(2)+'%: '+money(r.gst/2),14,y);y+=8}else{doc.text('IGST @ '+r.rate.toFixed(2)+'%: '+money(r.gst),14,y);y+=8}doc.setFontSize(14);doc.text('Total Invoice Value: '+money(r.total),14,y+4);y+=20;doc.setFontSize(9);doc.text('Generated using Adhiniyam GST Calculator. Verify before official use.',14,y);doc.save('gst-calculation-adhiniyam.pdf')}
+function pdfMoney(n){return 'INR '+(Number(n||0)).toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2})}
+function downloadGSTPDF(){
+  const r=calculateGST();
+  const {jsPDF}=window.jspdf;
+  const doc=new jsPDF({unit:'mm',format:'a4'});
+  const pageW=210;
+  const margin=16;
+  let y=18;
+
+  // Header
+  doc.setFillColor(15,30,61);
+  doc.roundedRect(margin, y, pageW-(margin*2), 22, 3, 3, 'F');
+  doc.setTextColor(255,255,255);
+  doc.setFont('helvetica','bold');
+  doc.setFontSize(16);
+  doc.text('Adhiniyam GST Calculation Summary', margin+6, y+9);
+  doc.setFont('helvetica','normal');
+  doc.setFontSize(9);
+  doc.text('Generated using Adhiniyam GST Calculator', margin+6, y+16);
+  y += 32;
+
+  // Details box
+  doc.setDrawColor(217,230,251);
+  doc.setFillColor(247,251,255);
+  doc.roundedRect(margin, y, pageW-(margin*2), 30, 3, 3, 'FD');
+  doc.setTextColor(15,30,61);
+  doc.setFont('helvetica','bold');
+  doc.setFontSize(10);
+  doc.text('Calculation Details', margin+6, y+8);
+  doc.setFont('helvetica','normal');
+  doc.setTextColor(80,96,125);
+  doc.text('Note: '+(g('note').value||'GST calculation'), margin+6, y+15);
+  doc.text('Mode: '+(r.mode==='exclusive'?'Add GST to taxable amount':'Remove GST from GST-inclusive amount'), margin+6, y+21);
+  doc.text('GST Type: '+(r.type==='cgst-sgst'?'CGST + SGST':'IGST'), margin+6, y+27);
+  y += 42;
+
+  // Result table
+  const tableX=margin;
+  const tableW=pageW-(margin*2);
+  const rowH=10;
+  const labelW=112;
+  const rows=[
+    ['Taxable Value', pdfMoney(r.taxable)],
+    ['Total GST @ '+r.rate.toFixed(2)+'%', pdfMoney(r.gst)]
+  ];
+  if(r.type==='cgst-sgst'){
+    rows.push(['CGST @ '+(r.rate/2).toFixed(2)+'%', pdfMoney(r.gst/2)]);
+    rows.push(['SGST @ '+(r.rate/2).toFixed(2)+'%', pdfMoney(r.gst/2)]);
+  } else {
+    rows.push(['IGST @ '+r.rate.toFixed(2)+'%', pdfMoney(r.gst)]);
+  }
+
+  doc.setFillColor(15,30,61);
+  doc.roundedRect(tableX, y, tableW, rowH, 2, 2, 'F');
+  doc.setTextColor(255,255,255);
+  doc.setFont('helvetica','bold');
+  doc.setFontSize(10);
+  doc.text('Particulars', tableX+5, y+6.7);
+  doc.text('Amount', tableX+labelW+5, y+6.7);
+  y += rowH;
+
+  doc.setFont('helvetica','normal');
+  rows.forEach((row,idx)=>{
+    doc.setFillColor(idx%2===0?255:247, idx%2===0?255:251, idx%2===0?255:255);
+    doc.setDrawColor(217,230,251);
+    doc.rect(tableX, y, tableW, rowH, 'FD');
+    doc.setTextColor(15,30,61);
+    doc.text(row[0], tableX+5, y+6.7);
+    doc.setFont('helvetica','bold');
+    doc.text(row[1], tableX+labelW+5, y+6.7);
+    doc.setFont('helvetica','normal');
+    y += rowH;
+  });
+
+  // Grand total
+  y += 4;
+  doc.setFillColor(21,168,107);
+  doc.roundedRect(tableX, y, tableW, 14, 3, 3, 'F');
+  doc.setTextColor(255,255,255);
+  doc.setFont('helvetica','bold');
+  doc.setFontSize(12);
+  doc.text('Total Invoice Value', tableX+5, y+9);
+  doc.text(pdfMoney(r.total), tableX+labelW+5, y+9);
+  y += 24;
+
+  // Verification note
+  doc.setTextColor(96,112,141);
+  doc.setFont('helvetica','normal');
+  doc.setFontSize(9);
+  const note='Important: This calculation is for general utility only. Verify GST rate, taxable value, place of supply and tax treatment before official use.';
+  const lines=doc.splitTextToSize(note, tableW);
+  doc.text(lines, margin, y);
+
+  doc.save('gst-calculation-adhiniyam.pdf');
+}
 document.addEventListener('DOMContentLoaded',()=>{handleRateChange();calculateGST()});
 </script></body></html>
