@@ -29,3 +29,5 @@ Update: Added five new SEO blog posts for GST invoicing and HR documentation, an
 
 
 Update: Added second batch of SEO blog posts and updated blogs.json, common.js fallback data, and sitemap.xml.
+
+Update note: Removed the public Address row from the Contact Information section.
