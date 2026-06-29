@@ -1,33 +1,3 @@
-Adhiniyam Website Package
+Adhiniyam Website Update - GST Calculator Tool Added
 
-Updated contact settings:
-- Email: enquiry@adhiniyam.com
-- Contact form endpoint: https://formspree.io/f/xpqgdvew
-- No WhatsApp number displayed for now
-- No address displayed
-- Refund requests are based on sole discretion
-
-How to deploy updates:
-1. Upload these updated files/folders to the existing GitHub repository.
-2. Commit changes.
-3. Vercel will redeploy automatically.
-
-Important folders:
-/assets/ - CSS, JS and JSON data
-/tools/ - tool pages
-/services/ - service pages
-/blog/ - blog pages
-/contact/ - contact form page
-/policy folders/ - privacy, terms, refund and disclaimer
-
-SEO update added:
-- sitemap.xml
-- robots.txt
-- canonical and OG URLs use primary www domain
-
-Update: Added five new SEO blog posts for GST invoicing and HR documentation, and updated blogs.json and sitemap.xml.
-
-
-Update: Added second batch of SEO blog posts and updated blogs.json, common.js fallback data, and sitemap.xml.
-
-Update note: Removed the public Address row from the Contact Information section.
+This package adds the live GST Calculator at /tools/gst-calculator/ and updates tools.json, common.js, homepage status, footer link and sitemap.xml. Upload the complete extracted package to GitHub and wait for Vercel redeploy.
