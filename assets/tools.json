@@ -150,6 +150,21 @@
     "showOnHome": false
   },
   {
+    "name": "Full & Final Settlement Calculator",
+    "slug": "full-and-final-settlement-calculator",
+    "category": "HR & Payroll",
+    "status": "Live",
+    "description": "Estimate employee full and final settlement with earned salary, leave encashment, gratuity, additions, deductions and net payable PDF summary.",
+    "url": "/tools/full-and-final-settlement-calculator/",
+    "cta": "Use Tool",
+    "relatedService": "Payroll Support",
+    "relatedServiceUrl": "/services/payroll-support/",
+    "tag": "Popular",
+    "icon": "FNF",
+    "order": 11,
+    "showOnHome": false
+  },
+  {
     "name": "Purchase Order Generator",
     "slug": "purchase-order-generator",
     "category": "Business Tools",
@@ -161,7 +176,7 @@
     "relatedServiceUrl": "/services/",
     "tag": "Coming Soon",
     "icon": "PO",
-    "order": 11,
+    "order": 12,
     "showOnHome": false
   },
   {
@@ -176,7 +191,7 @@
     "relatedServiceUrl": "/services/",
     "tag": "Coming Soon",
     "icon": "Receipt",
-    "order": 12,
+    "order": 13,
     "showOnHome": false
   },
   {
@@ -191,7 +206,7 @@
     "relatedServiceUrl": "/services/",
     "tag": "Coming Soon",
     "icon": "Agreement",
-    "order": 14,
+    "order": 15,
     "showOnHome": false
   },
   {
@@ -206,7 +221,7 @@
     "relatedServiceUrl": "/services/company-registration/",
     "tag": "Coming Soon",
     "icon": "Resolution",
-    "order": 15,
+    "order": 16,
     "showOnHome": false
   },
   {
@@ -221,7 +236,7 @@
     "relatedServiceUrl": "/services/",
     "tag": "Coming Soon",
     "icon": "NDA",
-    "order": 16,
+    "order": 17,
     "showOnHome": false
   }
 ]
