@@ -45,21 +45,6 @@
     "showOnHome": true
   },
   {
-    "name": "TDS Calculator",
-    "slug": "tds-calculator",
-    "category": "Tax & Compliance",
-    "status": "Coming Soon",
-    "description": "Calculate TDS deduction and net payable amount for salary, contractors, rent and professional fees.",
-    "url": "#",
-    "cta": "Coming Soon",
-    "relatedService": "GST & Tax Compliance",
-    "relatedServiceUrl": "/services/",
-    "tag": "Coming Soon",
-    "icon": "TDS",
-    "order": 7,
-    "showOnHome": false
-  },
-  {
     "name": "PF / ESIC Calculator",
     "slug": "pf-esic-calculator",
     "category": "HR & Payroll",
@@ -90,66 +75,6 @@
     "showOnHome": true
   },
   {
-    "name": "Quotation Generator",
-    "slug": "quotation-generator",
-    "category": "Business Tools",
-    "status": "Coming Soon",
-    "description": "Prepare professional quotations for clients with item details, pricing and terms.",
-    "url": "#",
-    "cta": "Coming Soon",
-    "relatedService": "Custom Business Tools",
-    "relatedServiceUrl": "/services/custom-business-tools/",
-    "tag": "Coming Soon",
-    "icon": "Quote",
-    "order": 8,
-    "showOnHome": false
-  },
-  {
-    "name": "Purchase Order Generator",
-    "slug": "purchase-order-generator",
-    "category": "Business Tools",
-    "status": "Coming Soon",
-    "description": "Create purchase orders for vendors and suppliers.",
-    "url": "#",
-    "cta": "Coming Soon",
-    "relatedService": "Business Compliance",
-    "relatedServiceUrl": "/services/",
-    "tag": "Coming Soon",
-    "icon": "PO",
-    "order": 9,
-    "showOnHome": false
-  },
-  {
-    "name": "Receipt Generator",
-    "slug": "receipt-generator",
-    "category": "Business Tools",
-    "status": "Coming Soon",
-    "description": "Generate payment receipts for customers and clients.",
-    "url": "#",
-    "cta": "Coming Soon",
-    "relatedService": "Business Compliance",
-    "relatedServiceUrl": "/services/",
-    "tag": "Coming Soon",
-    "icon": "Receipt",
-    "order": 10,
-    "showOnHome": false
-  },
-  {
-    "name": "Experience Letter Generator",
-    "slug": "experience-letter-generator",
-    "category": "HR & Payroll",
-    "status": "Coming Soon",
-    "description": "Create professional employee experience letters.",
-    "url": "#",
-    "cta": "Coming Soon",
-    "relatedService": "Payroll Support",
-    "relatedServiceUrl": "/services/payroll-support/",
-    "tag": "Coming Soon",
-    "icon": "Experience",
-    "order": 11,
-    "showOnHome": false
-  },
-  {
     "name": "Appointment Letter Generator",
     "slug": "appointment-letter-generator",
     "category": "HR & Payroll",
@@ -165,6 +90,81 @@
     "showOnHome": true
   },
   {
+    "name": "Experience Letter Generator",
+    "slug": "experience-letter-generator",
+    "category": "HR & Payroll",
+    "status": "Live",
+    "description": "Create professional employee experience letters online with employment period, designation, conduct note and PDF download.",
+    "url": "/tools/experience-letter-generator/",
+    "cta": "Use Tool",
+    "relatedService": "Payroll Support",
+    "relatedServiceUrl": "/services/payroll-support/",
+    "tag": "Popular",
+    "icon": "Experience",
+    "order": 7,
+    "showOnHome": false
+  },
+  {
+    "name": "TDS Calculator",
+    "slug": "tds-calculator",
+    "category": "Tax & Compliance",
+    "status": "Coming Soon",
+    "description": "Calculate TDS deduction and net payable amount for salary, contractors, rent and professional fees.",
+    "url": "#",
+    "cta": "Coming Soon",
+    "relatedService": "GST & Tax Compliance",
+    "relatedServiceUrl": "/services/",
+    "tag": "Coming Soon",
+    "icon": "TDS",
+    "order": 8,
+    "showOnHome": false
+  },
+  {
+    "name": "Quotation Generator",
+    "slug": "quotation-generator",
+    "category": "Business Tools",
+    "status": "Coming Soon",
+    "description": "Prepare professional quotations for clients with item details, pricing and terms.",
+    "url": "#",
+    "cta": "Coming Soon",
+    "relatedService": "Custom Business Tools",
+    "relatedServiceUrl": "/services/custom-business-tools/",
+    "tag": "Coming Soon",
+    "icon": "Quote",
+    "order": 9,
+    "showOnHome": false
+  },
+  {
+    "name": "Purchase Order Generator",
+    "slug": "purchase-order-generator",
+    "category": "Business Tools",
+    "status": "Coming Soon",
+    "description": "Create purchase orders for vendors and suppliers.",
+    "url": "#",
+    "cta": "Coming Soon",
+    "relatedService": "Business Compliance",
+    "relatedServiceUrl": "/services/",
+    "tag": "Coming Soon",
+    "icon": "PO",
+    "order": 10,
+    "showOnHome": false
+  },
+  {
+    "name": "Receipt Generator",
+    "slug": "receipt-generator",
+    "category": "Business Tools",
+    "status": "Coming Soon",
+    "description": "Generate payment receipts for customers and clients.",
+    "url": "#",
+    "cta": "Coming Soon",
+    "relatedService": "Business Compliance",
+    "relatedServiceUrl": "/services/",
+    "tag": "Coming Soon",
+    "icon": "Receipt",
+    "order": 11,
+    "showOnHome": false
+  },
+  {
     "name": "Rent Agreement Draft Generator",
     "slug": "rent-agreement-draft-generator",
     "category": "Legal & Documents",
@@ -176,7 +176,7 @@
     "relatedServiceUrl": "/services/",
     "tag": "Coming Soon",
     "icon": "Agreement",
-    "order": 12,
+    "order": 13,
     "showOnHome": false
   },
   {
@@ -191,7 +191,7 @@
     "relatedServiceUrl": "/services/company-registration/",
     "tag": "Coming Soon",
     "icon": "Resolution",
-    "order": 13,
+    "order": 14,
     "showOnHome": false
   },
   {
@@ -206,7 +206,7 @@
     "relatedServiceUrl": "/services/",
     "tag": "Coming Soon",
     "icon": "NDA",
-    "order": 14,
+    "order": 15,
     "showOnHome": false
   }
 ]

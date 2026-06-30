@@ -7,10 +7,12 @@
   <url><loc>https://www.adhiniyam.com/tools/gst-calculator/</loc><priority>0.9</priority></url>
   <url><loc>https://www.adhiniyam.com/tools/pf-esic-calculator/</loc><priority>0.9</priority></url>
   <url><loc>https://www.adhiniyam.com/tools/offer-letter-generator/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.adhiniyam.com/tools/appointment-letter-generator/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.adhiniyam.com/tools/experience-letter-generator/</loc><priority>0.9</priority></url>
   <url><loc>https://www.adhiniyam.com/services/</loc><priority>0.9</priority></url>
   <url><loc>https://www.adhiniyam.com/services/gst-registration/</loc><priority>0.8</priority></url>
-  <url><loc>https://www.adhiniyam.com/services/trademark-registration/</loc><priority>0.8</priority></url>
   <url><loc>https://www.adhiniyam.com/services/company-registration/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.adhiniyam.com/services/trademark-registration/</loc><priority>0.8</priority></url>
   <url><loc>https://www.adhiniyam.com/services/payroll-support/</loc><priority>0.8</priority></url>
   <url><loc>https://www.adhiniyam.com/services/custom-business-tools/</loc><priority>0.8</priority></url>
   <url><loc>https://www.adhiniyam.com/blog/</loc><priority>0.8</priority></url>
@@ -35,6 +37,4 @@
   <url><loc>https://www.adhiniyam.com/terms/</loc><priority>0.3</priority></url>
   <url><loc>https://www.adhiniyam.com/refund-policy/</loc><priority>0.3</priority></url>
   <url><loc>https://www.adhiniyam.com/disclaimer/</loc><priority>0.3</priority></url>
-
-  <url><loc>https://www.adhiniyam.com/tools/appointment-letter-generator/</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
 </urlset>
