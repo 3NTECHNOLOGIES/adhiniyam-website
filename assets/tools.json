@@ -165,6 +165,21 @@
     "showOnHome": false
   },
   {
+    "name": "Receipt Generator",
+    "slug": "receipt-generator",
+    "category": "Business Tools",
+    "status": "Live",
+    "description": "Generate professional payment receipts online with payer details, receipt number, amount, payment mode, invoice reference and PDF download.",
+    "url": "/tools/receipt-generator/",
+    "cta": "Use Tool",
+    "relatedService": "Business Compliance",
+    "relatedServiceUrl": "/services/",
+    "tag": "Popular",
+    "icon": "Receipt",
+    "order": 12,
+    "showOnHome": false
+  },
+  {
     "name": "Purchase Order Generator",
     "slug": "purchase-order-generator",
     "category": "Business Tools",
@@ -176,21 +191,6 @@
     "relatedServiceUrl": "/services/",
     "tag": "Coming Soon",
     "icon": "PO",
-    "order": 12,
-    "showOnHome": false
-  },
-  {
-    "name": "Receipt Generator",
-    "slug": "receipt-generator",
-    "category": "Business Tools",
-    "status": "Coming Soon",
-    "description": "Generate payment receipts for customers and clients.",
-    "url": "#",
-    "cta": "Coming Soon",
-    "relatedService": "Business Compliance",
-    "relatedServiceUrl": "/services/",
-    "tag": "Coming Soon",
-    "icon": "Receipt",
     "order": 13,
     "showOnHome": false
   },
