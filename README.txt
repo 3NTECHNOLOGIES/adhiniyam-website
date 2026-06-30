@@ -1,18 +1,12 @@
-Adhiniyam Receipt Generator Update
+Adhiniyam Tool Icon Upgrade
 
-Changed files included:
-- tools/receipt-generator/index.html
-- tools/receipt-generator/og-image.png
-- assets/tools.json
-- assets/common.js
-- index.html
-- tools/index.html
-- sitemap.xml
-- README.txt
+This package replaces first-letter tool card icons with clean lightweight SVG icons.
 
-Recommended upload method:
-1. Upload tools/receipt-generator folder first and confirm it appears in GitHub.
-2. Upload assets/tools.json, assets/common.js, index.html, tools/index.html, sitemap.xml and README.txt.
-3. Wait for Vercel deployment to show Ready.
-4. Test https://www.adhiniyam.com/tools/receipt-generator/
-5. Submit sitemap and request indexing for the new URL.
+Upload locations:
+- assets/common.js -> assets folder
+- assets/style.css -> assets folder
+- assets/tools.json -> assets folder
+- index.html -> repo root
+- tools/index.html -> tools folder
+
+After upload, wait for Vercel deployment to show Ready and hard refresh the homepage/tools page.
