@@ -1,6 +1,18 @@
-Adhiniyam TDS Calculator Tool Update
+Adhiniyam Receipt Generator Update
 
-This package adds /tools/tds-calculator/ and updates tools.json, common.js cache version, sitemap.xml and related site data. Upload the complete extracted package to GitHub and wait for Vercel deployment to complete.
+Changed files included:
+- tools/receipt-generator/index.html
+- tools/receipt-generator/og-image.png
+- assets/tools.json
+- assets/common.js
+- index.html
+- tools/index.html
+- sitemap.xml
+- README.txt
 
-
-Update: Added Full & Final Settlement Calculator at /tools/full-and-final-settlement-calculator/. Updated tools.json, common.js fallback data and sitemap.xml.
+Recommended upload method:
+1. Upload tools/receipt-generator folder first and confirm it appears in GitHub.
+2. Upload assets/tools.json, assets/common.js, index.html, tools/index.html, sitemap.xml and README.txt.
+3. Wait for Vercel deployment to show Ready.
+4. Test https://www.adhiniyam.com/tools/receipt-generator/
+5. Submit sitemap and request indexing for the new URL.
