@@ -35,4 +35,6 @@
   <url><loc>https://www.adhiniyam.com/terms/</loc><priority>0.3</priority></url>
   <url><loc>https://www.adhiniyam.com/refund-policy/</loc><priority>0.3</priority></url>
   <url><loc>https://www.adhiniyam.com/disclaimer/</loc><priority>0.3</priority></url>
+
+  <url><loc>https://www.adhiniyam.com/tools/appointment-letter-generator/</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
 </urlset>
