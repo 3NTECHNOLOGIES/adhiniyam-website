@@ -120,6 +120,21 @@
     "showOnHome": false
   },
   {
+    "name": "Quotation Generator",
+    "slug": "quotation-generator",
+    "category": "Business Tools",
+    "status": "Live",
+    "description": "Create professional GST and non-GST quotations online with item-wise pricing, discounts, terms, validity and PDF download.",
+    "url": "/tools/quotation-generator/",
+    "cta": "Use Tool",
+    "relatedService": "Custom Business Tools",
+    "relatedServiceUrl": "/services/custom-business-tools/",
+    "tag": "Popular",
+    "icon": "Quote",
+    "order": 9,
+    "showOnHome": false
+  },
+  {
     "name": "TDS Calculator",
     "slug": "tds-calculator",
     "category": "Tax & Compliance",
@@ -131,21 +146,6 @@
     "relatedServiceUrl": "/services/",
     "tag": "Coming Soon",
     "icon": "TDS",
-    "order": 9,
-    "showOnHome": false
-  },
-  {
-    "name": "Quotation Generator",
-    "slug": "quotation-generator",
-    "category": "Business Tools",
-    "status": "Coming Soon",
-    "description": "Prepare professional quotations for clients with item details, pricing and terms.",
-    "url": "#",
-    "cta": "Coming Soon",
-    "relatedService": "Custom Business Tools",
-    "relatedServiceUrl": "/services/custom-business-tools/",
-    "tag": "Coming Soon",
-    "icon": "Quote",
     "order": 10,
     "showOnHome": false
   },

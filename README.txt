@@ -1,3 +1,1 @@
-Adhiniyam website update package. Added Experience Letter Generator tool, updated tools data, fallback data and sitemap. Upload extracted files to GitHub and wait for Vercel redeploy.
-
-Update: Added Relieving Letter Generator at /tools/relieving-letter-generator/.
+Adhiniyam website update: Added Quotation Generator tool. Upload extracted contents to GitHub root and let Vercel redeploy. Test /tools/quotation-generator/, /tools/, homepage and sitemap.xml.
