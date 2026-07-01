@@ -1,14 +1,17 @@
-Credit Note / Debit Note Generator Update
+Board Resolution Generator Update - Corrected Package
 
-Upload in this order:
-1. Upload tools/credit-note-debit-note-generator/ inside the GitHub tools folder.
-2. Upload assets/tools.json and assets/common.js inside assets.
-3. Upload index.html, sitemap.xml and README.txt in root.
-4. Upload tools/index.html inside tools.
+This corrected package includes the missing supporting file:
+- tools/index.html
 
-After Vercel deploys, test:
-https://www.adhiniyam.com/tools/credit-note-debit-note-generator/
-https://www.adhiniyam.com/tools/
-https://www.adhiniyam.com/sitemap.xml
+Upload order:
+1. Upload tools/board-resolution-generator/ inside GitHub's tools folder.
+2. Upload tools/index.html inside GitHub's tools folder.
+3. Upload assets/tools.json and assets/common.js inside assets folder.
+4. Upload sitemap.xml at root.
 
-Then submit sitemap and request indexing for the new tool URL.
+After Vercel deployment:
+- Test https://www.adhiniyam.com/tools/board-resolution-generator/
+- Test https://www.adhiniyam.com/tools/
+- Test https://www.adhiniyam.com/sitemap.xml
+- Submit sitemap in Google Search Console
+- Request indexing for https://www.adhiniyam.com/tools/board-resolution-generator/
