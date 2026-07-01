@@ -210,6 +210,21 @@
     "showOnHome": false
   },
   {
+    "name": "Delivery Challan Generator",
+    "slug": "delivery-challan-generator",
+    "category": "Business Tools",
+    "status": "Live",
+    "description": "Create professional delivery challans with dispatch, consignee, item, transport and PDF details.",
+    "url": "/tools/delivery-challan-generator/",
+    "cta": "Use Tool",
+    "relatedService": "Custom Business Tools",
+    "relatedServiceUrl": "/services/custom-business-tools/",
+    "tag": "Business Tools",
+    "icon": "Delivery",
+    "order": 15,
+    "showOnHome": false
+  },
+  {
     "name": "Rent Agreement Draft Generator",
     "slug": "rent-agreement-draft-generator",
     "category": "Legal & Documents",
@@ -221,7 +236,7 @@
     "relatedServiceUrl": "/services/",
     "tag": "Coming Soon",
     "icon": "Agreement",
-    "order": 16,
+    "order": 17,
     "showOnHome": false
   },
   {
@@ -236,7 +251,7 @@
     "relatedServiceUrl": "/services/company-registration/",
     "tag": "Coming Soon",
     "icon": "Resolution",
-    "order": 17,
+    "order": 18,
     "showOnHome": false
   },
   {
@@ -251,7 +266,7 @@
     "relatedServiceUrl": "/services/",
     "tag": "Coming Soon",
     "icon": "NDA",
-    "order": 18,
+    "order": 19,
     "showOnHome": false
   }
 ]
