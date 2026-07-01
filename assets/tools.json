@@ -298,5 +298,20 @@
     "icon": "Proposal",
     "order": 20,
     "showOnHome": false
+  },
+  {
+    "name": "HRA Calculator",
+    "slug": "hra-calculator",
+    "category": "Tax & Compliance",
+    "status": "Live",
+    "description": "Calculate House Rent Allowance exemption, taxable HRA and rent paid minus 10% salary using metro or non-metro rules with PDF summary.",
+    "url": "/tools/hra-calculator/",
+    "cta": "Use Tool",
+    "relatedService": "Tax & Compliance Support",
+    "relatedServiceUrl": "/services/",
+    "tag": "Tax Tools",
+    "icon": "TDS",
+    "order": 21,
+    "showOnHome": false
   }
 ]
