@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free PDF Compressor Online | Compress PDF in Browser | Adhiniyam</title>
+  <meta name="description" content="Compress PDF files online in your browser. Choose low, medium or high compression and download a smaller PDF. Best for scanned or image-heavy PDFs.">
+  <link rel="canonical" href="https://www.adhiniyam.com/tools/pdf-compressor/">
+  <meta property="og:title" content="Free PDF Compressor Online | Adhiniyam">
+  <meta property="og:description" content="Compress PDF files online in your browser. No server upload. Best for scanned or image-heavy PDFs.">
+  <meta property="og:image" content="https://www.adhiniyam.com/tools/pdf-compressor/og-image.png">
+  <meta property="og:url" content="https://www.adhiniyam.com/tools/pdf-compressor/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .tool-panel{background:#fff;border:1px solid #D9E6FB;border-radius:24px;padding:24px;box-shadow:0 18px 45px rgba(15,30,61,.08);margin:28px 0}
+    .upload-box{border:2px dashed #AFC8F8;background:#F7FBFF;border-radius:24px;padding:34px;text-align:center;transition:.2s}
+    .upload-box.dragover{background:#EAF1FF;border-color:#2D65F3}
+    .upload-box input{display:none}.upload-title{font-size:22px;font-weight:900;color:#0F1E3D;margin-bottom:8px}.upload-sub{color:#60708D;margin-bottom:18px}
+    .tool-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:18px}
+    .field label{display:block;font-weight:800;color:#0F1E3D;margin-bottom:7px;font-size:14px}
+    .field select,.field input{width:100%;border:1px solid #D9E6FB;border-radius:14px;padding:12px 13px;font:inherit;color:#0F1E3D;background:#fff;outline:none}
+    .result-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:22px 0}.result-card{background:#F7FBFF;border:1px solid #D9E6FB;border-radius:18px;padding:16px}.result-card strong{display:block;color:#0F1E3D;margin-bottom:6px}.result-card span{font-size:20px;font-weight:900;color:#2D65F3}
+    .progress-wrap{margin:18px 0;background:#EAF1FF;border-radius:999px;height:14px;overflow:hidden;display:none}.progress-bar{height:100%;width:0;background:#2D65F3;transition:.2s}
+    .status-box{background:#F7FBFF;border:1px solid #D9E6FB;border-radius:18px;padding:16px;margin-top:16px;color:#0F1E3D}
+    .note-box{background:#FFF8E6;border:1px solid #F4D680;border-radius:18px;padding:16px;color:#5B4100;margin-top:16px}
+    .success-box{background:#ECFDF5;border:1px solid #A7F3D0;border-radius:18px;padding:16px;color:#065F46;margin-top:16px;display:none}
+    .file-row{display:flex;justify-content:space-between;gap:14px;align-items:center;background:#fff;border:1px solid #D9E6FB;border-radius:16px;padding:14px;margin-top:16px;flex-wrap:wrap}
+    .file-name{font-weight:900;color:#0F1E3D}.small-muted{color:#60708D;font-size:13px}
+    @media(max-width:900px){.tool-form{grid-template-columns:1fr}.result-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:640px){.result-grid{grid-template-columns:1fr}.upload-box{padding:24px}}
+  </style>
+</head>
+<body><header id="site-header"></header>
+<main>
+<section class="hero mini-hero"><div class="container hero-grid"><div><span class="badge info">PDF & File Tool</span><h1>Free PDF Compressor Online</h1><p>Compress PDF files directly in your browser. Choose quality level and download a smaller PDF. Best for scanned documents, image-heavy PDFs, agreements, KYC documents and portal uploads.</p><div class="hero-actions"><a class="btn primary" href="#tool">Use Tool</a><a class="btn secondary" href="/tools/">Explore Tools</a><a class="btn green" href="/contact/">Get Support</a></div><div class="chip-row"><span>Browser Processing</span><span>No Server Upload</span><span>PDF Download</span><span>Image-heavy PDFs</span></div></div><div class="hero-card"><h3>Useful For</h3><div class="mini-list"><div><strong>GST / MCA Uploads</strong><span>Reduce scan document size</span></div><div><strong>KYC Documents</strong><span>PAN, Aadhaar, utility bills</span></div><div><strong>Agreements</strong><span>Rent agreement, signed documents</span></div><div><strong>Client Sharing</strong><span>Smaller PDF attachments</span></div></div></div></div></section>
+
+<section class="section" id="tool"><div class="container"><div class="section-title"><span class="eyebrow">PDF Compressor Tool</span><h2>Compress PDF File</h2><p>Upload a PDF, choose compression level and download the compressed file.</p></div>
+
+<div class="tool-panel">
+  <div class="upload-box" id="dropZone">
+    <div class="upload-title">Drop PDF here or choose file</div>
+    <div class="upload-sub">Your PDF is processed in your browser. It is not uploaded to Adhiniyam server.</div>
+    <label class="btn primary" for="pdfFile">Choose PDF</label>
+    <input id="pdfFile" type="file" accept="application/pdf" onchange="handleFileSelect(event)">
+  </div>
+
+  <div id="fileInfo" class="file-row" style="display:none">
+    <div><div class="file-name" id="fileName">No file selected</div><div class="small-muted" id="fileMeta">-</div></div>
+    <button class="btn secondary" onclick="clearFile()">Remove File</button>
+  </div>
+
+  <div class="tool-form">
+    <div class="field"><label>Compression Level</label><select id="level" onchange="updateModeNote()"><option value="low">Low Compression - Better Quality</option><option value="medium" selected>Medium Compression - Balanced</option><option value="high">High Compression - Smaller File</option></select></div>
+    <div class="field"><label>Output Page Quality</label><select id="pageMode" onchange="updateModeNote()"><option value="balanced" selected>Balanced</option><option value="sharp">Sharper Text / Larger Size</option><option value="small">Smaller Size / Lower Quality</option></select></div>
+    <div class="field"><label>Output File Name</label><input id="outputName" value="compressed-pdf.pdf"></div>
+  </div>
+
+  <div class="btn-row" style="margin-top:18px">
+    <button class="btn primary" onclick="compressPDF()">Compress PDF</button>
+    <button class="btn green" id="downloadBtn" style="display:none" onclick="downloadCompressed()">Download Compressed PDF</button>
+    <button class="btn secondary" onclick="clearFile()">Reset</button>
+  </div>
+
+  <div class="progress-wrap" id="progressWrap"><div class="progress-bar" id="progressBar"></div></div>
+  <div class="status-box" id="statusBox">Select a PDF file to begin.</div>
+  <div class="success-box" id="successBox"></div>
+
+  <div class="result-grid">
+    <div class="result-card"><strong>Original Size</strong><span id="originalSize">-</span></div>
+    <div class="result-card"><strong>Compressed Size</strong><span id="compressedSize">-</span></div>
+    <div class="result-card"><strong>Reduction</strong><span id="reduction">-</span></div>
+    <div class="result-card"><strong>Pages</strong><span id="pageCount">-</span></div>
+  </div>
+
+  <div class="note-box" id="modeNote"></div>
+  <div class="note-box"><strong>Important:</strong> This browser-based compressor works best for scanned or image-heavy PDFs. For text-based PDFs, compression may be limited. This tool may rasterize pages, so searchable/selectable text may not remain searchable after compression.</div>
+</div></div></section>
+
+<section class="section soft"><div class="container grid-2"><div class="card"><span class="badge info">Related Use</span><h2>Compress Documents for Portal Upload</h2><p>Use this tool for GST, MCA, trademark, KYC, bank and client document uploads where file size limits are common.</p><div class="btn-row"><a class="btn primary" href="/services/gst-registration/">GST Support</a><a class="btn secondary" href="/services/company-registration/">Company Support</a></div></div><div class="card"><span class="badge live">Need Custom Tool?</span><h2>Build Custom PDF Workflows</h2><p>Adhiniyam can help create custom business tools for document generation, PDF workflows and compliance operations.</p><div class="btn-row"><a class="btn green" href="/contact/">Contact Adhiniyam</a><a class="btn secondary" href="/services/custom-business-tools/">Custom Tools</a></div></div></div></section>
+
+<section class="section"><div class="container narrow"><div class="section-title"><h2>FAQs</h2></div><div class="faq">
+<div class="faq-item"><button class="faq-q">Is my PDF uploaded to the server?</button><div class="faq-a"><p>No. This tool processes the PDF in your browser. The file is not uploaded to Adhiniyam server.</p></div></div>
+<div class="faq-item"><button class="faq-q">Which PDFs compress best?</button><div class="faq-a"><p>Scanned PDFs and image-heavy PDFs usually compress better. Text-only PDFs may not reduce significantly.</p></div></div>
+<div class="faq-item"><button class="faq-q">Will the compressed PDF remain searchable?</button><div class="faq-a"><p>This tool may convert pages into compressed images, so selectable/searchable text may be lost. Use it when smaller file size is more important than text searchability.</p></div></div>
+<div class="faq-item"><button class="faq-q">Why did my PDF size increase?</button><div class="faq-a"><p>Some already-optimized or text-based PDFs may not compress well. Try a different compression level or keep the original PDF.</p></div></div>
+</div></div></section>
+
+<section class="section disclaimer-section"><div class="container"><div class="disclaimer-box"><strong>Important Disclaimer:</strong> This tool is for general file-size reduction only. Results vary depending on PDF structure, images, fonts and existing compression. Always review the compressed PDF before official use or submission.</div></div></section>
+</main><footer id="site-footer"></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="/assets/common.js?v=pdf-compressor-20260701"></script>
+<script>
+pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+let selectedFile=null, compressedBlob=null, compressedUrl=null;
+function formatBytes(bytes){if(!bytes && bytes!==0)return'-';const units=['B','KB','MB','GB'];let size=bytes,i=0;while(size>=1024&&i<units.length-1){size/=1024;i++;}return(size>=10?size.toFixed(1):size.toFixed(2))+' '+units[i];}
+function pctReduction(original,compressed){if(!original||!compressed)return'-';const r=((original-compressed)/original)*100;return (r>=0?'-':'+' )+Math.abs(r).toFixed(1)+'%';}
+function updateStatus(msg){document.getElementById('statusBox').textContent=msg;}
+function setProgress(p){document.getElementById('progressWrap').style.display='block';document.getElementById('progressBar').style.width=Math.max(0,Math.min(100,p))+'%';}
+function updateModeNote(){const level=document.getElementById('level').value;let text='Medium compression gives a balanced result for most scanned PDFs.';if(level==='low')text='Low compression keeps better visual quality but may reduce file size less.';if(level==='high')text='High compression creates a smaller file but may reduce clarity. Review the PDF before official use.';document.getElementById('modeNote').textContent=text;}
+function handleFileSelect(e){const file=e.target.files[0];if(file)loadFile(file);}
+function loadFile(file){if(file.type!=='application/pdf' && !file.name.toLowerCase().endsWith('.pdf')){alert('Please select a PDF file.');return;}selectedFile=file;compressedBlob=null;if(compressedUrl)URL.revokeObjectURL(compressedUrl);compressedUrl=null;document.getElementById('fileInfo').style.display='flex';document.getElementById('fileName').textContent=file.name;document.getElementById('fileMeta').textContent='Original size: '+formatBytes(file.size);document.getElementById('originalSize').textContent=formatBytes(file.size);document.getElementById('compressedSize').textContent='-';document.getElementById('reduction').textContent='-';document.getElementById('pageCount').textContent='-';document.getElementById('downloadBtn').style.display='none';document.getElementById('successBox').style.display='none';updateStatus('PDF selected. Choose compression level and click Compress PDF.');}
+function clearFile(){selectedFile=null;compressedBlob=null;if(compressedUrl)URL.revokeObjectURL(compressedUrl);compressedUrl=null;document.getElementById('pdfFile').value='';document.getElementById('fileInfo').style.display='none';document.getElementById('originalSize').textContent='-';document.getElementById('compressedSize').textContent='-';document.getElementById('reduction').textContent='-';document.getElementById('pageCount').textContent='-';document.getElementById('downloadBtn').style.display='none';document.getElementById('successBox').style.display='none';document.getElementById('progressWrap').style.display='none';setProgress(0);updateStatus('Select a PDF file to begin.');}
+function settings(){const level=document.getElementById('level').value;const mode=document.getElementById('pageMode').value;let quality=0.65,scale=1.25;if(level==='low'){quality=0.82;scale=1.45;}if(level==='medium'){quality=0.62;scale=1.20;}if(level==='high'){quality=0.42;scale=0.95;}if(mode==='sharp'){scale+=0.25;quality=Math.min(0.88,quality+0.10);}if(mode==='small'){scale=Math.max(0.70,scale-0.18);quality=Math.max(0.32,quality-0.10);}return{quality,scale};}
+async function compressPDF(){try{if(!selectedFile){alert('Please choose a PDF file first.');return;}compressedBlob=null;document.getElementById('downloadBtn').style.display='none';document.getElementById('successBox').style.display='none';updateStatus('Reading PDF...');setProgress(3);const arrayBuffer=await selectedFile.arrayBuffer();const pdf=await pdfjsLib.getDocument({data:arrayBuffer}).promise;document.getElementById('pageCount').textContent=pdf.numPages;const {jsPDF}=window.jspdf;const s=settings();let out=null;for(let i=1;i<=pdf.numPages;i++){updateStatus('Compressing page '+i+' of '+pdf.numPages+'...');const page=await pdf.getPage(i);const baseViewport=page.getViewport({scale:1});const renderViewport=page.getViewport({scale:s.scale});const canvas=document.createElement('canvas');const ctx=canvas.getContext('2d',{alpha:false});canvas.width=Math.floor(renderViewport.width);canvas.height=Math.floor(renderViewport.height);ctx.fillStyle='#FFFFFF';ctx.fillRect(0,0,canvas.width,canvas.height);await page.render({canvasContext:ctx,viewport:renderViewport}).promise;const imgData=canvas.toDataURL('image/jpeg',s.quality);const orientation=baseViewport.width>baseViewport.height?'landscape':'portrait';if(!out){out=new jsPDF({orientation,unit:'pt',format:[baseViewport.width,baseViewport.height],compress:true});}else{out.addPage([baseViewport.width,baseViewport.height],orientation);}out.addImage(imgData,'JPEG',0,0,baseViewport.width,baseViewport.height,undefined,'FAST');canvas.width=1;canvas.height=1;setProgress(5+(i/pdf.numPages)*88);}updateStatus('Preparing compressed PDF...');compressedBlob=out.output('blob');document.getElementById('compressedSize').textContent=formatBytes(compressedBlob.size);document.getElementById('reduction').textContent=pctReduction(selectedFile.size,compressedBlob.size);compressedUrl=URL.createObjectURL(compressedBlob);document.getElementById('downloadBtn').style.display='inline-flex';document.getElementById('successBox').style.display='block';document.getElementById('successBox').textContent='Compression complete. Original: '+formatBytes(selectedFile.size)+' | Compressed: '+formatBytes(compressedBlob.size)+' | Change: '+pctReduction(selectedFile.size,compressedBlob.size)+'. Review the downloaded PDF before official use.';setProgress(100);updateStatus('Compression completed. You can download the compressed PDF.');}catch(err){console.error(err);updateStatus('Unable to compress this PDF in browser. The file may be protected, too large, damaged, or not supported.');alert('Unable to compress this PDF. Please try another file or lower compression settings.');}}
+function downloadCompressed(){if(!compressedBlob||!compressedUrl)return;let name=document.getElementById('outputName').value.trim()||'compressed-pdf.pdf';if(!name.toLowerCase().endsWith('.pdf'))name+='.pdf';const a=document.createElement('a');a.href=compressedUrl;a.download=name;document.body.appendChild(a);a.click();a.remove();}
+const dz=document.getElementById('dropZone');['dragenter','dragover'].forEach(ev=>dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.add('dragover');}));['dragleave','drop'].forEach(ev=>dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.remove('dragover');}));dz.addEventListener('drop',e=>{const file=e.dataTransfer.files[0];if(file)loadFile(file);});document.addEventListener('DOMContentLoaded',updateModeNote);
+</script></body></html>
