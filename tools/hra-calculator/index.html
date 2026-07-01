@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free HRA Calculator Online | House Rent Allowance Exemption | Adhiniyam</title>
+  <meta name="description" content="Calculate HRA exemption, taxable HRA, rent paid minus 10% salary and metro/non-metro exemption using Adhiniyam's free HRA Calculator.">
+  <link rel="canonical" href="https://www.adhiniyam.com/tools/hra-calculator/">
+  <meta property="og:title" content="Free HRA Calculator Online | Adhiniyam">
+  <meta property="og:description" content="Calculate House Rent Allowance exemption, taxable HRA and PDF summary using metro/non-metro rules.">
+  <meta property="og:image" content="https://www.adhiniyam.com/tools/hra-calculator/og-image.png">
+  <meta property="og:url" content="https://www.adhiniyam.com/tools/hra-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .tool-panel{background:#fff;border:1px solid #D9E6FB;border-radius:24px;padding:24px;box-shadow:0 18px 45px rgba(15,30,61,.08);margin:28px 0}
+    .tool-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.tool-form .full{grid-column:1/-1}
+    .field label{display:block;font-weight:800;color:#0F1E3D;margin-bottom:7px;font-size:14px}
+    .field input,.field select,.field textarea{width:100%;border:1px solid #D9E6FB;border-radius:14px;padding:12px 13px;font:inherit;color:#0F1E3D;background:#fff;outline:none}
+    .field textarea{min-height:76px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:#2D65F3;box-shadow:0 0 0 4px rgba(45,101,243,.10)}
+    .form-section{grid-column:1/-1;margin-top:8px;padding-top:16px;border-top:1px solid #EAF1FF}.form-section h3{margin:0 0 12px;color:#0F1E3D}
+    .result-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:22px 0}.result-card{background:#F7FBFF;border:1px solid #D9E6FB;border-radius:18px;padding:16px}.result-card strong{display:block;color:#0F1E3D;margin-bottom:6px}.result-card span{font-size:20px;font-weight:900;color:#2D65F3}
+    .calc-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #D9E6FB;border-radius:16px;overflow:hidden}.calc-table th,.calc-table td{border-bottom:1px solid #EAF1FF;padding:12px;text-align:left}.calc-table th{background:#F7FBFF;color:#0F1E3D}.calc-table td:last-child{text-align:right;font-weight:800}
+    .note-box{background:#FFF8E6;border:1px solid #F4D680;border-radius:18px;padding:16px;color:#5B4100;margin-top:16px}
+    .preview-wrap{margin-top:26px;background:#F7FBFF;border:1px solid #D9E6FB;border-radius:22px;padding:18px}
+    .hra-preview{background:#fff;color:#111827;max-width:850px;margin:0 auto;border:1px solid #E5E7EB;box-shadow:0 12px 35px rgba(15,30,61,.10);padding:36px;line-height:1.58;font-family:Arial,sans-serif}
+    .hra-preview h2{text-align:center;font-size:23px;margin:0 0 8px;text-transform:uppercase;color:#0F1E3D}.hra-preview table{width:100%;border-collapse:collapse;margin:16px 0}.hra-preview th,.hra-preview td{border:1px solid #D1D5DB;padding:8px;font-size:13px}.hra-preview th{background:#EAF1FF;color:#0F1E3D}.hra-preview .total{font-size:18px;font-weight:900;color:#0F1E3D}
+    @media(max-width:920px){.result-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:760px){.tool-form{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr}.hra-preview{padding:22px}}
+  </style>
+</head>
+<body><header id="site-header"></header>
+<main>
+<section class="hero mini-hero"><div class="container hero-grid"><div><span class="badge info">Tax & Salary Tool</span><h1>Free HRA Calculator Online</h1><p>Calculate House Rent Allowance exemption, taxable HRA and rent paid minus 10% salary using metro/non-metro rules with a professional PDF summary.</p><div class="hero-actions"><a class="btn primary" href="#tool">Use Tool</a><a class="btn secondary" href="/tools/salary-slip-generator/">Salary Slip Generator</a><a class="btn green" href="/contact/">Get Support</a></div><div class="chip-row"><span>No Login Required</span><span>PDF Download</span><span>Metro / Non-Metro</span><span>Salary Tax Tool</span></div></div><div class="hero-card"><h3>HRA Formula Checks</h3><div class="mini-list"><div><strong>Actual HRA</strong><span>HRA received from employer</span></div><div><strong>Rent minus 10%</strong><span>Rent paid over 10% salary</span></div><div><strong>40% / 50%</strong><span>Non-metro or metro salary limit</span></div><div><strong>Taxable HRA</strong><span>HRA received minus exemption</span></div></div></div></div></section>
+
+<section class="section" id="tool"><div class="container"><div class="section-title"><span class="eyebrow">HRA Calculation Tool</span><h2>Calculate HRA Exemption</h2><p>Enter salary, HRA and rent details. Keep optional fields as zero if not applicable.</p></div>
+<div class="tool-panel"><form class="tool-form" onsubmit="event.preventDefault(); calculateHRA();">
+
+<div class="form-section"><h3>Calculation Period</h3></div>
+<div class="field"><label>Calculation Mode</label><select id="mode" onchange="calculateHRA()"><option value="annual">Annual Calculation</option><option value="monthly">Monthly Calculation</option></select></div>
+<div class="field"><label>Months Rented / HRA Period</label><input id="months" type="number" value="12" min="1" max="12" oninput="calculateHRA()"></div>
+<div class="field"><label>City Type</label><select id="cityType" onchange="calculateHRA()"><option value="metro">Metro - Delhi, Mumbai, Kolkata, Chennai</option><option value="nonmetro">Non-Metro / Other City</option></select></div>
+<div class="field"><label>Do you pay rent?</label><select id="payRent" onchange="calculateHRA()"><option value="yes">Yes</option><option value="no">No</option></select></div>
+
+<div class="form-section"><h3>Salary and Rent Details</h3></div>
+<div class="field"><label>Basic Salary</label><input id="basic" type="number" value="50000" oninput="calculateHRA()"></div>
+<div class="field"><label>HRA Received</label><input id="hra" type="number" value="20000" oninput="calculateHRA()"></div>
+<div class="field"><label>Rent Paid</label><input id="rent" type="number" value="18000" oninput="calculateHRA()"></div>
+<div class="field"><label>DA, if applicable</label><input id="da" type="number" value="0" oninput="calculateHRA()"></div>
+<div class="field"><label>Turnover Commission, if applicable</label><input id="commission" type="number" value="0" oninput="calculateHRA()"></div>
+<div class="field"><label>Landlord PAN Available?</label><select id="pan" onchange="calculateHRA()"><option value="yes">Yes / Not required</option><option value="no">No</option></select></div>
+
+<div class="form-section"><h3>Employee Details for PDF</h3></div>
+<div class="field"><label>Employee Name</label><input id="employeeName" value="Employee Name" oninput="calculateHRA()"></div>
+<div class="field"><label>Financial Year</label><input id="fy" value="2026-27" oninput="calculateHRA()"></div>
+<div class="field full"><label>Notes</label><textarea id="notes" oninput="calculateHRA()">This is an estimated HRA calculation. Final tax treatment should be verified before payroll or ITR filing.</textarea></div>
+
+<div class="full btn-row"><button class="btn primary" type="button" onclick="calculateHRA()">Calculate HRA</button><button class="btn green" type="button" onclick="downloadPDF()">Download PDF</button><button class="btn secondary" type="button" onclick="resetHRA()">Reset</button></div>
+</form>
+
+<div class="result-grid">
+  <div class="result-card"><strong>HRA Exempt</strong><span id="resExempt">INR 0</span></div>
+  <div class="result-card"><strong>Taxable HRA</strong><span id="resTaxable">INR 0</span></div>
+  <div class="result-card"><strong>Rent - 10% Salary</strong><span id="resRentMinus">INR 0</span></div>
+  <div class="result-card"><strong>40% / 50% Limit</strong><span id="resLimit">INR 0</span></div>
+</div>
+
+<table class="calc-table">
+<thead><tr><th>Exemption Condition</th><th>Amount</th></tr></thead>
+<tbody>
+<tr><td>Actual HRA received</td><td id="tblActual">INR 0</td></tr>
+<tr><td>Rent paid minus 10% of salary</td><td id="tblRentMinus">INR 0</td></tr>
+<tr><td>50% of salary for metro / 40% for non-metro</td><td id="tblLimit">INR 0</td></tr>
+<tr><td><strong>Least of above = HRA Exemption</strong></td><td id="tblExempt">INR 0</td></tr>
+<tr><td><strong>Taxable HRA</strong></td><td id="tblTaxable">INR 0</td></tr>
+</tbody>
+</table>
+
+<div id="panNote" class="note-box"></div>
+
+<div class="preview-wrap"><div id="hraPreview" class="hra-preview"></div></div>
+</div></div></section>
+
+<section class="section soft"><div class="container grid-2"><div class="card"><span class="badge info">Related Tool</span><h2>Prepare Salary Slip</h2><p>After calculating salary components and HRA, use the Salary Slip Generator to create employee salary slips.</p><div class="btn-row"><a class="btn primary" href="/tools/salary-slip-generator/">Salary Slip Generator</a><a class="btn secondary" href="/tools/tds-calculator/">TDS Calculator</a></div></div><div class="card"><span class="badge live">Payroll Support</span><h2>Need Payroll or Tax Support?</h2><p>Connect with Adhiniyam for payroll, salary structure, TDS and employee documentation support.</p><div class="btn-row"><a class="btn green" href="/contact/">Contact Adhiniyam</a><a class="btn secondary" href="/services/payroll-support/">Payroll Support</a></div></div></div></section>
+
+<section class="section disclaimer-section"><div class="container"><div class="disclaimer-box"><strong>Important Disclaimer:</strong> This tool is for general calculation and informational purposes only. HRA exemption depends on actual facts, salary components, rent payment, city, period of occupation, documentation, PAN reporting and applicable tax law. Verify final calculation before payroll, Form 16 or income tax filing.</div></div></section>
+</main><footer id="site-footer"></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script><script src="/assets/common.js?v=hra-calculator-20260701"></script>
+<script>
+function val(id){return document.getElementById(id)?.value||'';}function num(id){return Number(val(id)||0);}function money(n){return'INR '+Number(n||0).toLocaleString('en-IN',{maximumFractionDigits:2});}function safe(s){return(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+let latest={};
+function annualize(x){return val('mode')==='monthly'?x*num('months'):x;}
+function calculateHRA(){
+  const months=Math.max(1, Math.min(12, num('months')||12));
+  document.getElementById('months').value=months;
+  const basic=annualize(num('basic'));
+  const hra=annualize(num('hra'));
+  const rent=annualize(num('rent'));
+  const da=annualize(num('da'));
+  const commission=annualize(num('commission'));
+  const salary=basic+da+commission;
+  let actual=hra;
+  let rentMinus=rent-(salary*0.10);
+  if(rentMinus<0) rentMinus=0;
+  const limitRate=val('cityType')==='metro'?0.50:0.40;
+  const limit=salary*limitRate;
+  let exempt=0;
+  if(val('payRent')==='yes') exempt=Math.min(actual,rentMinus,limit);
+  if(!isFinite(exempt) || exempt<0) exempt=0;
+  const taxable=Math.max(0,hra-exempt);
+  latest={months,basic,hra,rent,da,commission,salary,actual,rentMinus,limit,exempt,taxable,limitRate};
+  ['resExempt','tblExempt'].forEach(id=>document.getElementById(id).textContent=money(exempt));
+  document.getElementById('resTaxable').textContent=money(taxable);
+  document.getElementById('tblTaxable').textContent=money(taxable);
+  document.getElementById('resRentMinus').textContent=money(rentMinus);
+  document.getElementById('tblRentMinus').textContent=money(rentMinus);
+  document.getElementById('resLimit').textContent=money(limit);
+  document.getElementById('tblLimit').textContent=money(limit);
+  document.getElementById('tblActual').textContent=money(actual);
+  const annualRent=val('mode')==='monthly'?num('rent')*months:num('rent');
+  let note='HRA exemption is available only when rent is actually paid for rented accommodation and other conditions are satisfied.';
+  if(annualRent>100000 && val('pan')==='no') note+=' Annual rent appears to exceed INR 1,00,000. Landlord PAN reporting/documentation may be required as per tax guidance.';
+  if(val('payRent')==='no') note='No rent paid selected. HRA exemption has been treated as zero.';
+  document.getElementById('panNote').textContent=note;
+  renderPreview();
+}
+function renderPreview(){
+  const c=latest;
+  const city=val('cityType')==='metro'?'Metro city - 50% salary limit':'Non-metro city - 40% salary limit';
+  const html=`<h2>HRA Calculation Summary</h2><p style="text-align:center"><strong>${safe(val('employeeName'))}</strong> | Financial Year: ${safe(val('fy'))} | Period: ${c.months} month(s)</p><table><tr><th>Particulars</th><th>Amount</th></tr><tr><td>Basic Salary</td><td>${money(c.basic)}</td></tr><tr><td>DA, if applicable</td><td>${money(c.da)}</td></tr><tr><td>Turnover Commission, if applicable</td><td>${money(c.commission)}</td></tr><tr><td>Salary for HRA purpose</td><td>${money(c.salary)}</td></tr><tr><td>Actual HRA received</td><td>${money(c.actual)}</td></tr><tr><td>Rent paid</td><td>${money(c.rent)}</td></tr><tr><td>Rent paid minus 10% of salary</td><td>${money(c.rentMinus)}</td></tr><tr><td>${city}</td><td>${money(c.limit)}</td></tr><tr><td><strong>HRA Exemption</strong></td><td><strong>${money(c.exempt)}</strong></td></tr><tr><td><strong>Taxable HRA</strong></td><td><strong>${money(c.taxable)}</strong></td></tr></table><p>${safe(val('notes'))}</p><p><strong>Note:</strong> This is a general calculation summary. Final HRA exemption should be verified with actual rent receipts, salary structure and applicable tax rules.</p>`;
+  document.getElementById('hraPreview').innerHTML=html;
+}
+function resetHRA(){document.getElementById('mode').value='annual';document.getElementById('months').value='12';document.getElementById('cityType').value='metro';document.getElementById('payRent').value='yes';document.getElementById('basic').value='50000';document.getElementById('hra').value='20000';document.getElementById('rent').value='18000';document.getElementById('da').value='0';document.getElementById('commission').value='0';document.getElementById('employeeName').value='Employee Name';document.getElementById('fy').value='2026-27';document.getElementById('notes').value='This is an estimated HRA calculation. Final tax treatment should be verified before payroll or ITR filing.';calculateHRA();}
+function downloadPDF(){calculateHRA();const {jsPDF}=window.jspdf;const doc=new jsPDF('p','mm','a4');let y=18;const m=16;const c=latest;doc.setFont('helvetica','bold');doc.setFontSize(15);doc.text('HRA CALCULATION SUMMARY',105,y,{align:'center'});y+=10;doc.setFont('helvetica','normal');doc.setFontSize(10);const lines=[`Employee: ${val('employeeName')} | Financial Year: ${val('fy')} | Period: ${c.months} month(s)`,`City Type: ${val('cityType')==='metro'?'Metro - 50% limit':'Non-metro - 40% limit'}`,`Basic Salary: ${money(c.basic)}`,`DA, if applicable: ${money(c.da)}`,`Turnover Commission, if applicable: ${money(c.commission)}`,`Salary for HRA purpose: ${money(c.salary)}`,`Actual HRA received: ${money(c.actual)}`,`Rent paid: ${money(c.rent)}`,`Rent paid minus 10% of salary: ${money(c.rentMinus)}`,`50% / 40% salary limit: ${money(c.limit)}`,`HRA Exemption: ${money(c.exempt)}`,`Taxable HRA: ${money(c.taxable)}`,`Notes: ${val('notes')}`,`Disclaimer: This is a general calculation summary. Verify actual rent, documents, salary components and applicable tax rules before official use.`];lines.forEach(p=>{const split=doc.splitTextToSize(p,178);if(y+split.length*6>280){doc.addPage();y=18;}doc.text(split,m,y);y+=split.length*6+2;});doc.save('hra-calculation-summary.pdf');}
+document.addEventListener('DOMContentLoaded',calculateHRA);
+</script></body></html>
