@@ -2,31 +2,39 @@
 
 ## Immediate Next Tool
 
-Client Proposal Generator
+Income Tax Calculator with Old vs New Regime Comparison
 
-Purpose:
-Create a professional client proposal draft for service providers, consultants, agencies, freelancers and small businesses.
+Important:
+Before creating this tool, verify current tax slabs, rebate, cess and regime rules from official/current sources because income tax rules may change.
 
 Expected features:
-- Business / proposer details
-- Client details
-- Proposal title
-- Proposal date
-- Valid until date
-- Project / service scope
-- Deliverables
-- Timeline
-- Pricing table
-- GST/non-GST option
-- Payment terms
-- Assumptions and exclusions
-- Terms and conditions
-- Acceptance section
-- Live preview
-- PDF download
-- CTA to Quotation Generator
-- CTA to Invoice Generator
-- CTA to Adhiniyam support/contact
+- Financial Year / Assessment Year selection
+- Age category
+- Salary income
+- Other income
+- Standard deduction
+- Old regime deductions
+- New regime calculation
+- Old regime calculation
+- Rebate calculation
+- Health and education cess
+- Total tax payable
+- Old vs New comparison
+- Best regime suggestion
+- PDF summary
+- Disclaimer that final tax should be verified before filing
+
+## Next Tools After Income Tax Calculator
+
+1. Rent Receipt Generator
+2. Gratuity Calculator
+3. Salary Structure / CTC to In-Hand Calculator
+4. EMI Calculator
+5. Advance Tax Calculator
+6. GST Interest & Late Fee Calculator
+7. GST Return Due Date Tracker
+8. Trademark Class Finder
+9. Trademark Cost Calculator
 
 ## Upload Workflow Reminder
 
@@ -39,24 +47,22 @@ For every new tool:
    - `tools/index.html`
    - `sitemap.xml`
    - `README.txt`
-4. Wait for Vercel deployment to show Ready.
-5. Test live URL.
-6. Submit sitemap.
-7. Request indexing.
-
-## Next Tools After Client Proposal
-
-1. HRA Calculator
-2. Advance Tax Calculator
-3. GST Late Fee Calculator
-4. Business Letterhead Generator
-5. Work Order Generator
+4. Upload root `index.html` only when homepage content/design is changed.
+5. Wait for Vercel deployment to show Ready.
+6. Test live URL, tools page and sitemap.
+7. Submit sitemap.
+8. Request indexing.
 
 ## SEO Tasks
 
 1. Check Search Console after 24–48 hours.
 2. Monitor indexed pages, discovered pages, crawled but not indexed, impressions and queries.
 3. Add supporting blogs for:
+   - HRA calculation
+   - Income Tax Calculator old vs new regime
+   - Rent Receipt format
+   - Gratuity calculation
+   - Salary structure / CTC to in-hand
    - Board Resolution formats
    - Rent Agreement for GST address proof
    - NDA meaning and format

@@ -27,9 +27,11 @@
 ### Tools Added
 - Invoice Generator
 - Salary Slip Generator
+- New Joiner Salary Calculator
 - GST Calculator
 - PF / ESIC Calculator
 - TDS Calculator
+- HRA Calculator
 - Offer Letter Generator
 - Appointment Letter Generator
 - Experience Letter Generator
@@ -40,10 +42,10 @@
 - Credit Note / Debit Note Generator
 - Receipt Generator
 - Full & Final Settlement Calculator
-- New Joiner Salary Calculator
 - Board Resolution Generator
 - Rent Agreement Draft Generator
 - NDA Generator
+- Client Proposal Generator
 
 ### Blogs Added
 - Initial SEO blog pages added.
@@ -51,9 +53,12 @@
 - Payroll, company registration and trademark-related blogs added.
 
 ### Latest Completed
-- Board Resolution Generator completed, sitemap updated and indexing requested.
-- Rent Agreement Draft Generator completed, sitemap updated and indexing requested.
 - NDA Generator completed, sitemap updated and indexing requested.
+- Client Proposal Generator completed, sitemap updated and indexing requested.
+- HRA Calculator completed, sitemap updated and indexing requested.
 
 ### Next Planned
-- Client Proposal Generator
+- Income Tax Calculator with Old vs New Regime Comparison
+- Rent Receipt Generator
+- Gratuity Calculator
+- Salary Structure / CTC to In-Hand Calculator
