@@ -2,87 +2,30 @@
 
 Last Updated: 2026-07-01
 
-## 1. Project Overview
+## Project Overview
 
-Adhiniyam.com is a business, legal, tax, HR and compliance tools website for India.
+Adhiniyam is a business, legal, tax, HR and compliance tools website for India.
 
-The website is positioned as:
+Live Website: https://www.adhiniyam.com  
+GitHub Repository: adhiniyam-website  
+Vercel Project: adhiniyam-website  
 
-- Free business utility tools platform
-- GST, compliance, payroll and business document support platform
-- Lead-generation website for professional services
-- Future-ready platform for monetisation, sponsored placements, premium tools and custom business tools
+## Contact Details
 
-## 2. Live Website
+Public Email: enquiry@adhiniyam.com  
+Call Number: +91 9999395031  
+WhatsApp Number: +91 9999395031  
+Contact Form Endpoint: https://formspree.io/f/xpqgdvew  
 
-Primary Website:
+Top contact strip is active above the navbar:
+- Left side: Email icon + enquiry@adhiniyam.com
+- Right side: Call icon + +91 9999395031
 
-https://www.adhiniyam.com
+## Current Website Setup
 
-Redirect:
+The website includes homepage, free tools page, services page, blog page, about page, contact page, policy pages, sitemap, robots.txt, Google Search Console setup, Formspree contact form, logo/favicon, SVG tool icons and global top contact bar.
 
-https://adhiniyam.com redirects to https://www.adhiniyam.com
-
-## 3. Technical Setup
-
-GitHub Repository:
-
-adhiniyam-website
-
-Vercel Project:
-
-adhiniyam-website
-
-Hosting:
-
-Vercel static website
-
-Domain Provider:
-
-GoDaddy
-
-Primary Domain:
-
-www.adhiniyam.com
-
-## 4. Contact Details
-
-Email shown on website:
-
-enquiry@adhiniyam.com
-
-Call / WhatsApp:
-
-+91 9999395031
-
-Contact form endpoint:
-
-https://formspree.io/f/xpqgdvew
-
-Address:
-
-Do not show address on website.
-
-## 5. Global UI Notes
-
-Current global header includes:
-
-- Top slim contact strip above navbar
-- Left side: email icon + enquiry@adhiniyam.com
-- Right side: call icon + +91 9999395031
-- Navbar with Adhiniyam logo
-- Navigation: Home, Free Tools, Services, Blog, About, Contact
-- Header buttons: Explore Tools and WhatsApp
-
-Important fix already done:
-
-Top contact strip icon size was fixed because SVG icons became too large and covered the page.
-
-Current tool cards use attractive SVG-style icons instead of first-letter initials.
-
-## 6. Live Tools
-
-The following tools are live or were added to the project:
+## Current Live Tools
 
 1. Invoice Generator
 2. Salary Slip Generator
@@ -100,158 +43,91 @@ The following tools are live or were added to the project:
 14. Credit Note / Debit Note Generator
 15. Receipt Generator
 16. Full & Final Settlement Calculator
+17. Board Resolution Generator
+18. Rent Agreement Draft Generator
 
-Latest pending / next tool package:
+## Recently Completed Tools
 
-Board Resolution Generator
+Board Resolution Generator is live, sitemap updated and indexing requested.  
+URL: https://www.adhiniyam.com/tools/board-resolution-generator/
 
-Expected URL:
+Rent Agreement Draft Generator is live, sitemap updated and indexing requested.  
+URL: https://www.adhiniyam.com/tools/rent-agreement-draft-generator/
 
-https://www.adhiniyam.com/tools/board-resolution-generator/
+## Blog Status
 
-## 7. Blog Status
+Adhiniyam currently has multiple SEO blogs live, including GST, invoice, payroll, HR, company registration and trademark-related articles.
 
-Known blog themes already created:
-
-- GST invoice
-- salary slip
-- GST registration documents
-- trademark registration
-- company registration process
-- tax invoice vs bill of supply
-- GST invoice format for services
-- common GST invoice mistakes
-- GST calculation
-- offer letter vs appointment letter
-- employee joining documents
-- PF and ESIC basics
+Examples of live blog topics:
+- How to Create a GST Invoice Online
+- What is a Salary Slip and Why is it Important?
+- Documents Required for GST Registration
+- How to Register a Trademark in India
+- Company Registration Process in India
+- Difference Between Tax Invoice and Bill of Supply
+- GST Invoice Format for Services in India
+- Common GST Invoice Mistakes to Avoid
+- How to Calculate GST on an Invoice
+- Offer Letter vs Appointment Letter
+- Documents Required From New Employees
+- PF and ESIC Contribution Basics
 - Private Limited Company vs LLP
-- trademark registration vs company name registration
-- what to do after company registration
+- Trademark Registration vs Company Name Registration
+- What to Do After Company Registration
 
-## 8. SEO / Search Console Status
+## Search Console Status
 
-Google Search Console:
-
-Domain property verified for adhiniyam.com
-
-Sitemap:
-
+Google Search Console ownership is verified. Sitemap is submitted at:
 https://www.adhiniyam.com/sitemap.xml
 
-robots.txt:
+For new URLs:
+1. Submit updated sitemap.
+2. Request indexing.
+3. If quota is exceeded, leave remaining URLs for sitemap discovery and request the next day.
 
-https://www.adhiniyam.com/robots.txt
+## Important Upload Workflow
 
-Workflow already used:
+For every new tool update:
 
-- Submit sitemap after every new tool/blog batch.
-- Request indexing for each new important URL.
-- If URL inspection quota is exceeded, submit remaining URLs next day.
-- Do not repeatedly request indexing for same URL unless major update is made.
+1. Upload the new tool folder inside GitHub `/tools/`.
+2. Confirm:
+   - `tools/new-tool-slug/index.html`
+   - `tools/new-tool-slug/og-image.png`
+3. Upload supporting files:
+   - `assets/tools.json`
+   - `assets/common.js`
+   - `tools/index.html`, if included
+   - `sitemap.xml`
+   - `README.txt`
+4. Wait for Vercel deployment to show Ready.
+5. Test:
+   - new tool URL
+   - tools listing page
+   - sitemap URL
+6. Submit sitemap and request indexing.
 
-## 9. Standard New Tool Upload Workflow
+## Known Issue and Fix
 
-For every new tool, use this safe method:
+Sometimes GitHub browser upload misses nested folders.
 
-Step 1:
-
-Upload the new tool folder inside GitHub's tools folder.
-
-Example:
-
-tools/new-tool-slug/
-
-Confirm these files exist:
-
-tools/new-tool-slug/index.html
-tools/new-tool-slug/og-image.png
-
-Step 2:
-
-Upload supporting files in correct locations:
-
-assets/tools.json
-assets/common.js
-tools/index.html
-sitemap.xml
-README.txt
-
-Sometimes index.html at root may also be updated if homepage featured cards change.
-
-Step 3:
-
-Wait for Vercel deployment to show Ready.
-
-Step 4:
-
-Test:
-
-https://www.adhiniyam.com/tools/new-tool-slug/
-https://www.adhiniyam.com/tools/
-https://www.adhiniyam.com/sitemap.xml
-
-Step 5:
-
-Submit updated sitemap in Search Console.
-
-Step 6:
-
-Request indexing for the new tool URL.
-
-## 10. Common Issue and Fix
-
-Issue:
-
-A tool card shows on homepage/tools page but direct tool URL gives 404.
-
-Meaning:
-
-assets/tools.json or common.js updated, but actual tool folder is missing or not deployed.
+Symptom:
+- Tool card appears on homepage/tools page
+- Direct tool URL gives 404
 
 Fix:
+1. Upload only the missing tool folder inside `/tools/`.
+2. Confirm `index.html` and `og-image.png` exist in GitHub.
+3. Wait for Vercel deployment.
+4. Retest URL.
 
-Upload the new tool folder inside /tools/ again and confirm index.html exists.
+## Recommended Next Workflow
 
-Issue:
+Next planned tool:
+1. NDA Generator
 
-Direct tool URL works but card is not showing as Live.
+Suggested tools after NDA:
+2. Client Proposal Generator
+3. HRA Calculator
+4. Advance Tax Calculator
+5. GST Late Fee Calculator
 
-Meaning:
-
-Tool folder exists, but tools.json/common.js/tools/index.html are not updated.
-
-Fix:
-
-Upload supporting files again.
-
-Issue:
-
-Update uploaded but not reflected on website.
-
-Possible causes:
-
-- GitHub upload did not commit.
-- Vercel deployment not Ready.
-- Browser cache.
-- common.js cached.
-
-Fix:
-
-- Check GitHub path.
-- Check Vercel deployment.
-- Hard refresh with Ctrl + Shift + R.
-- Add cache/version tag if needed.
-
-## 11. Important Project Rule
-
-Adhiniyam should not depend only on ChatGPT chat history.
-
-The permanent source of truth should be:
-
-- GitHub repository
-- PROJECT_STATUS.md
-- CHANGELOG.md
-- NEXT_TASKS.md
-
-If chat history disappears, paste or upload these files in the new chat and ask ChatGPT to continue.
