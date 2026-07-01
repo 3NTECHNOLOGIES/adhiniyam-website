@@ -313,5 +313,20 @@
     "icon": "TDS",
     "order": 21,
     "showOnHome": false
+  },
+  {
+    "name": "PDF Compressor",
+    "slug": "pdf-compressor",
+    "category": "Business Tools",
+    "status": "Live",
+    "description": "Compress PDF files online in the browser with low, medium or high compression and download a smaller PDF. Best for scanned or image-heavy PDFs.",
+    "url": "/tools/pdf-compressor/",
+    "cta": "Use Tool",
+    "relatedService": "Custom Business Tools",
+    "relatedServiceUrl": "/services/custom-business-tools/",
+    "tag": "PDF Tools",
+    "icon": "PDF",
+    "order": 22,
+    "showOnHome": false
   }
 ]
