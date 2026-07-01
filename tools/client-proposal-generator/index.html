@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Client Proposal Generator Online | Business Proposal PDF | Adhiniyam</title>
+  <meta name="description" content="Create professional client proposals online with scope, deliverables, timeline, pricing, GST/non-GST option, payment terms and PDF download.">
+  <link rel="canonical" href="https://www.adhiniyam.com/tools/client-proposal-generator/">
+  <meta property="og:title" content="Free Client Proposal Generator Online | Adhiniyam">
+  <meta property="og:description" content="Generate professional service proposals with scope, pricing, timeline, payment terms, assumptions and PDF download.">
+  <meta property="og:image" content="https://www.adhiniyam.com/tools/client-proposal-generator/og-image.png">
+  <meta property="og:url" content="https://www.adhiniyam.com/tools/client-proposal-generator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .tool-panel{background:#fff;border:1px solid #D9E6FB;border-radius:24px;padding:24px;box-shadow:0 18px 45px rgba(15,30,61,.08);margin:28px 0}
+    .tool-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.tool-form .full{grid-column:1/-1}
+    .field label{display:block;font-weight:800;color:#0F1E3D;margin-bottom:7px;font-size:14px}
+    .field input,.field select,.field textarea{width:100%;border:1px solid #D9E6FB;border-radius:14px;padding:12px 13px;font:inherit;color:#0F1E3D;background:#fff;outline:none}
+    .field textarea{min-height:90px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:#2D65F3;box-shadow:0 0 0 4px rgba(45,101,243,.10)}
+    .form-section{grid-column:1/-1;margin-top:8px;padding-top:16px;border-top:1px solid #EAF1FF}.form-section h3{margin:0 0 12px;color:#0F1E3D}
+    .item-table{grid-column:1/-1;overflow:auto;border:1px solid #D9E6FB;border-radius:16px}.item-table table{width:100%;border-collapse:collapse;background:#fff;min-width:760px}.item-table th,.item-table td{border-bottom:1px solid #EAF1FF;padding:9px;text-align:left}.item-table th{background:#F7FBFF;color:#0F1E3D;font-size:13px}.item-table input{border:1px solid #D9E6FB;border-radius:10px;padding:8px;width:100%}
+    .preview-wrap{margin-top:26px;background:#F7FBFF;border:1px solid #D9E6FB;border-radius:22px;padding:18px}
+    .proposal-preview{background:#fff;color:#111827;max-width:900px;margin:0 auto;border:1px solid #E5E7EB;box-shadow:0 12px 35px rgba(15,30,61,.10);padding:42px;line-height:1.58;font-family:Arial,sans-serif}
+    .proposal-preview h2{text-align:center;font-size:24px;margin:0 0 8px;text-transform:uppercase;letter-spacing:.6px;color:#0F1E3D}.proposal-preview h3{margin:22px 0 10px;color:#0F1E3D}.proposal-preview p{margin:0 0 10px}
+    .proposal-preview .proposal-meta{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}.proposal-preview .meta-box{border:1px solid #D1D5DB;padding:12px;background:#FAFAFA}
+    .proposal-preview table{width:100%;border-collapse:collapse;margin:12px 0}.proposal-preview th,.proposal-preview td{border:1px solid #D1D5DB;padding:8px;font-size:13px}.proposal-preview th{background:#EAF1FF;color:#0F1E3D}
+    .proposal-preview .total-box{text-align:right;font-weight:800;margin-top:10px}.proposal-preview .sign-row{display:flex;justify-content:space-between;gap:20px;margin-top:40px;font-size:13px}
+    .summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px}.summary-card{background:#fff;border:1px solid #D9E6FB;border-radius:18px;padding:15px}.summary-card strong{display:block;color:#0F1E3D;margin-bottom:4px}
+    @media(max-width:920px){.summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.proposal-preview .proposal-meta{grid-template-columns:1fr}}@media(max-width:760px){.tool-form{grid-template-columns:1fr}.proposal-preview{padding:24px}.summary-grid{grid-template-columns:1fr}.proposal-preview .sign-row{flex-direction:column}}
+  </style>
+</head>
+<body><header id="site-header"></header>
+<main>
+<section class="hero mini-hero"><div class="container hero-grid"><div><span class="badge info">Business Document Tool</span><h1>Free Client Proposal Generator</h1><p>Create professional client proposals for services, consulting, freelancing, agencies and small businesses with scope, deliverables, pricing, payment terms and PDF download.</p><div class="hero-actions"><a class="btn primary" href="#tool">Use Tool</a><a class="btn secondary" href="/tools/quotation-generator/">Quotation Generator</a><a class="btn green" href="/contact/">Get Support</a></div><div class="chip-row"><span>No Login Required</span><span>PDF Download</span><span>Service Proposal</span><span>Business Tools</span></div></div><div class="hero-card"><h3>Proposal Flow</h3><div class="mini-list"><div><strong>Scope</strong><span>Services and deliverables</span></div><div><strong>Timeline</strong><span>Project schedule</span></div><div><strong>Pricing</strong><span>GST or non-GST proposal</span></div><div><strong>Acceptance</strong><span>Client sign-off section</span></div></div></div></div></section>
+
+<section class="section" id="tool"><div class="container"><div class="section-title"><span class="eyebrow">Proposal Tool</span><h2>Create Client Proposal</h2><p>Fill proposal details, add pricing rows, review the live preview and download a PDF.</p></div>
+<div class="tool-panel"><form class="tool-form" onsubmit="event.preventDefault(); updateProposal();">
+
+<div class="form-section"><h3>Business / Proposer Details</h3></div>
+<div class="field"><label>Business Name</label><input id="businessName" value="Your Business Name" oninput="updateProposal()"></div>
+<div class="field"><label>Email / Phone</label><input id="businessContact" value="enquiry@adhiniyam.com | +91 9999395031" oninput="updateProposal()"></div>
+<div class="field full"><label>Business Address</label><textarea id="businessAddress" oninput="updateProposal()">Business address</textarea></div>
+
+<div class="form-section"><h3>Client Details</h3></div>
+<div class="field"><label>Client Name</label><input id="clientName" value="Client Name" oninput="updateProposal()"></div>
+<div class="field"><label>Client Contact</label><input id="clientContact" placeholder="Email / phone, optional" oninput="updateProposal()"></div>
+<div class="field full"><label>Client Address</label><textarea id="clientAddress" oninput="updateProposal()">Client address</textarea></div>
+
+<div class="form-section"><h3>Proposal Details</h3></div>
+<div class="field"><label>Proposal Title</label><input id="proposalTitle" value="Service Proposal" oninput="updateProposal()"></div>
+<div class="field"><label>Proposal Number</label><input id="proposalNo" value="PROP-001" oninput="updateProposal()"></div>
+<div class="field"><label>Proposal Date</label><input id="proposalDate" type="date" oninput="updateProposal()"></div>
+<div class="field"><label>Valid Until</label><input id="validUntil" type="date" oninput="updateProposal()"></div>
+<div class="field"><label>Prepared By</label><input id="preparedBy" value="Authorized Person" oninput="updateProposal()"></div>
+<div class="field"><label>Proposal Type</label><select id="proposalType" onchange="updateProposal()"><option>Service Proposal</option><option>Consulting Proposal</option><option>Freelance Proposal</option><option>Agency Proposal</option><option>Project Proposal</option><option>Custom Proposal</option></select></div>
+
+<div class="field full"><label>Project / Service Overview</label><textarea id="overview" oninput="updateProposal()">This proposal outlines the scope, deliverables, timeline and commercial terms for the proposed services.</textarea></div>
+<div class="field full"><label>Scope of Work</label><textarea id="scope" oninput="updateProposal()">1. Understanding client requirements
+2. Planning and execution of agreed services
+3. Regular updates and coordination
+4. Delivery of agreed outputs</textarea></div>
+<div class="field full"><label>Deliverables</label><textarea id="deliverables" oninput="updateProposal()">1. Project deliverable 1
+2. Project deliverable 2
+3. Final output / report / document / service completion</textarea></div>
+<div class="field full"><label>Timeline / Milestones</label><textarea id="timeline" oninput="updateProposal()">Estimated timeline: 7 to 15 working days from confirmation and receipt of required information.</textarea></div>
+
+<div class="form-section"><h3>Pricing</h3></div>
+<div class="field"><label>Pricing Type</label><select id="pricingType" onchange="updateProposal()"><option>Non-GST Proposal</option><option>GST Proposal - CGST + SGST</option><option>GST Proposal - IGST</option></select></div>
+<div class="field"><label>Default GST Rate %</label><input id="gstRate" type="number" value="18" oninput="updateProposal()"></div>
+
+<div class="item-table"><table><thead><tr><th>Service / Item</th><th>Qty</th><th>Rate</th><th>Amount</th><th></th></tr></thead><tbody id="itemRows"></tbody></table></div>
+<div class="full btn-row"><button class="btn secondary" type="button" onclick="addRow()">Add Row</button></div>
+
+<div class="form-section"><h3>Terms</h3></div>
+<div class="field full"><label>Payment Terms</label><textarea id="paymentTerms" oninput="updateProposal()">50% advance payment and balance before final delivery, unless otherwise agreed in writing.</textarea></div>
+<div class="field full"><label>Assumptions and Exclusions</label><textarea id="assumptions" oninput="updateProposal()">This proposal is based on information currently available. Any additional work, change in scope, third-party fee, government fee, travel, subscription or out-of-pocket expense shall be charged separately, if applicable.</textarea></div>
+<div class="field full"><label>Terms and Conditions</label><textarea id="terms" oninput="updateProposal()">Work will begin after written confirmation and receipt of required details/payment. Timelines may change if client inputs, approvals or documents are delayed.</textarea></div>
+<div class="field full"><label>Acceptance Text</label><textarea id="acceptance" oninput="updateProposal()">By signing below, the client confirms acceptance of the proposal scope, pricing and terms mentioned above.</textarea></div>
+
+<div class="full btn-row"><button class="btn primary" type="button" onclick="updateProposal()">Update Preview</button><button class="btn green" type="button" onclick="downloadPDF()">Download PDF</button><button class="btn secondary" type="button" onclick="resetProposal()">Reset</button></div>
+</form>
+
+<div class="preview-wrap"><div id="proposalPreview" class="proposal-preview"></div></div>
+<div class="summary-grid"><div class="summary-card"><strong>Subtotal</strong><span id="sumSubtotal">INR 0</span></div><div class="summary-card"><strong>GST</strong><span id="sumGst">INR 0</span></div><div class="summary-card"><strong>Total</strong><span id="sumTotal">INR 0</span></div><div class="summary-card"><strong>Valid Until</strong><span id="sumValid">-</span></div></div>
+</div></div></section>
+
+<section class="section soft"><div class="container grid-2"><div class="card"><span class="badge info">Next Step</span><h2>Create Quotation After Proposal</h2><p>Once the client approves the proposal, create a professional quotation for pricing confirmation.</p><div class="btn-row"><a class="btn primary" href="/tools/quotation-generator/">Quotation Generator</a><a class="btn secondary" href="/tools/invoice-generator/">Invoice Generator</a></div></div><div class="card"><span class="badge live">Business Support</span><h2>Need Custom Business Tools?</h2><p>Adhiniyam can help with custom tools and documentation workflows for businesses.</p><div class="btn-row"><a class="btn green" href="/contact/">Contact Adhiniyam</a><a class="btn secondary" href="/services/custom-business-tools/">Custom Tools</a></div></div></div></section>
+
+<section class="section disclaimer-section"><div class="container"><div class="disclaimer-box"><strong>Important Disclaimer:</strong> This proposal generator is for general business utility only. Pricing, taxes, service terms, acceptance clauses, timelines and legal enforceability should be verified before official use.</div></div></section>
+</main><footer id="site-footer"></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script><script src="/assets/common.js?v=client-proposal-20260701"></script>
+<script>
+let rowId=0;function val(id){return document.getElementById(id)?.value||'';}function safe(s){return(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}function money(n){return'INR '+Number(n||0).toLocaleString('en-IN',{maximumFractionDigits:2});}function formatDate(d){if(!d)return'-';const date=new Date(d+'T00:00:00');return date.toLocaleDateString('en-IN',{day:'2-digit',month:'long',year:'numeric'});}
+function addRow(desc='Service / Deliverable',qty=1,rate=10000){const tbody=document.getElementById('itemRows');const id=rowId++;const tr=document.createElement('tr');tr.dataset.id=id;tr.innerHTML=`<td><input class="desc" value="${desc}" oninput="updateProposal()"></td><td><input class="qty" type="number" value="${qty}" oninput="updateProposal()"></td><td><input class="rate" type="number" value="${rate}" oninput="updateProposal()"></td><td class="amount">INR 0</td><td><button type="button" class="btn secondary" onclick="removeRow(${id})">Remove</button></td>`;tbody.appendChild(tr);updateProposal();}
+function removeRow(id){document.querySelector(`tr[data-id="${id}"]`)?.remove();updateProposal();}
+function getRows(){return Array.from(document.querySelectorAll('#itemRows tr')).map(tr=>{const desc=tr.querySelector('.desc').value;const qty=Number(tr.querySelector('.qty').value||0);const rate=Number(tr.querySelector('.rate').value||0);const amount=qty*rate;tr.querySelector('.amount').textContent=money(amount);return{desc,qty,rate,amount};});}
+function calc(){const rows=getRows();const subtotal=rows.reduce((s,r)=>s+r.amount,0);let gst=0;const type=val('pricingType');if(type.includes('GST'))gst=subtotal*Number(val('gstRate')||0)/100;return{rows,subtotal,gst,total:subtotal+gst};}
+function updateProposal(){const c=calc();const gstRows=val('pricingType').includes('GST')?`<tr><td colspan="3"><strong>GST @ ${safe(val('gstRate'))}%</strong></td><td>${money(c.gst)}</td></tr>`:'';const itemHtml=c.rows.map((r,i)=>`<tr><td>${i+1}. ${safe(r.desc)}</td><td>${r.qty}</td><td>${money(r.rate)}</td><td>${money(r.amount)}</td></tr>`).join('');const html=`<h2>${safe(val('proposalTitle'))}</h2><p style="text-align:center">Proposal No: ${safe(val('proposalNo'))} | Date: ${formatDate(val('proposalDate'))} | Valid Until: ${formatDate(val('validUntil'))}</p><div class="proposal-meta"><div class="meta-box"><strong>Prepared By</strong><br>${safe(val('businessName'))}<br>${safe(val('businessContact'))}<br>${safe(val('businessAddress')).replace(/\\n/g,'<br>')}</div><div class="meta-box"><strong>Prepared For</strong><br>${safe(val('clientName'))}<br>${safe(val('clientContact'))}<br>${safe(val('clientAddress')).replace(/\\n/g,'<br>')}</div></div><h3>1. Project Overview</h3><p>${safe(val('overview')).replace(/\\n/g,'<br>')}</p><h3>2. Scope of Work</h3><p>${safe(val('scope')).replace(/\\n/g,'<br>')}</p><h3>3. Deliverables</h3><p>${safe(val('deliverables')).replace(/\\n/g,'<br>')}</p><h3>4. Timeline</h3><p>${safe(val('timeline')).replace(/\\n/g,'<br>')}</p><h3>5. Commercial Proposal</h3><table><thead><tr><th>Service / Item</th><th>Qty</th><th>Rate</th><th>Amount</th></tr></thead><tbody>${itemHtml}<tr><td colspan="3"><strong>Subtotal</strong></td><td>${money(c.subtotal)}</td></tr>${gstRows}<tr><td colspan="3"><strong>Total Proposal Value</strong></td><td><strong>${money(c.total)}</strong></td></tr></tbody></table><h3>6. Payment Terms</h3><p>${safe(val('paymentTerms')).replace(/\\n/g,'<br>')}</p><h3>7. Assumptions and Exclusions</h3><p>${safe(val('assumptions')).replace(/\\n/g,'<br>')}</p><h3>8. Terms and Conditions</h3><p>${safe(val('terms')).replace(/\\n/g,'<br>')}</p><h3>9. Acceptance</h3><p>${safe(val('acceptance')).replace(/\\n/g,'<br>')}</p><div class="sign-row"><div><strong>For ${safe(val('businessName'))}</strong><br><br><br>_______________________<br>${safe(val('preparedBy'))}</div><div><strong>Accepted by Client</strong><br><br><br>_______________________<br>${safe(val('clientName'))}</div></div>`;document.getElementById('proposalPreview').innerHTML=html;document.getElementById('sumSubtotal').textContent=money(c.subtotal);document.getElementById('sumGst').textContent=money(c.gst);document.getElementById('sumTotal').textContent=money(c.total);document.getElementById('sumValid').textContent=formatDate(val('validUntil'));}
+function resetProposal(){document.getElementById('itemRows').innerHTML='';addRow('Service / Deliverable 1',1,10000);addRow('Service / Deliverable 2',1,5000);updateProposal();}
+function downloadPDF(){updateProposal();const {jsPDF}=window.jspdf;const doc=new jsPDF('p','mm','a4');let y=16;const m=14;doc.setFont('helvetica','bold');doc.setFontSize(15);doc.text(val('proposalTitle').toUpperCase(),105,y,{align:'center'});y+=8;doc.setFont('helvetica','normal');doc.setFontSize(9);const c=calc();const lines=[`Proposal No: ${val('proposalNo')} | Date: ${formatDate(val('proposalDate'))} | Valid Until: ${formatDate(val('validUntil'))}`,`Prepared By: ${val('businessName')} | ${val('businessContact')}`,`Prepared For: ${val('clientName')} | ${val('clientContact')}`,`Overview: ${val('overview')}`,`Scope of Work: ${val('scope')}`,`Deliverables: ${val('deliverables')}`,`Timeline: ${val('timeline')}`,`Commercial Proposal: Subtotal ${money(c.subtotal)} | GST ${money(c.gst)} | Total ${money(c.total)}`,`Payment Terms: ${val('paymentTerms')}`,`Assumptions and Exclusions: ${val('assumptions')}`,`Terms and Conditions: ${val('terms')}`,`Acceptance: ${val('acceptance')}`];lines.forEach(p=>{const split=doc.splitTextToSize(p,182);if(y+split.length*5>280){doc.addPage();y=16;}doc.text(split,m,y);y+=split.length*5+4;});if(y>245){doc.addPage();y=30;}y+=12;doc.text('For '+val('businessName'),m,y);doc.text('Accepted by Client',120,y);y+=24;doc.text('_______________________',m,y);doc.text('_______________________',120,y);y+=6;doc.text(val('preparedBy'),m,y);doc.text(val('clientName'),120,y);doc.save('client-proposal.pdf');}
+document.addEventListener('DOMContentLoaded',()=>{addRow('Service / Deliverable 1',1,10000);addRow('Service / Deliverable 2',1,5000);});
+</script></body></html>
