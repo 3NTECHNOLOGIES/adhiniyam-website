@@ -2,29 +2,31 @@
 
 ## Immediate Next Tool
 
-NDA Generator
+Client Proposal Generator
+
+Purpose:
+Create a professional client proposal draft for service providers, consultants, agencies, freelancers and small businesses.
 
 Expected features:
-- NDA type selection:
-  - Mutual NDA
-  - One-way NDA
-  - Employee NDA
-  - Vendor / Freelancer NDA
-  - Consultant NDA
-  - Client NDA
-- Disclosing party details
-- Receiving party details
-- Effective date
-- Purpose of disclosure
-- Confidential information description
-- Exclusions
-- Confidentiality period
-- Return/destroy information clause
-- Jurisdiction field
-- Witness/signatory details
+- Business / proposer details
+- Client details
+- Proposal title
+- Proposal date
+- Valid until date
+- Project / service scope
+- Deliverables
+- Timeline
+- Pricing table
+- GST/non-GST option
+- Payment terms
+- Assumptions and exclusions
+- Terms and conditions
+- Acceptance section
 - Live preview
 - PDF download
-- Disclaimer that final legal review is required
+- CTA to Quotation Generator
+- CTA to Invoice Generator
+- CTA to Adhiniyam support/contact
 
 ## Upload Workflow Reminder
 
@@ -42,17 +44,21 @@ For every new tool:
 6. Submit sitemap.
 7. Request indexing.
 
-## Next Tools After NDA
+## Next Tools After Client Proposal
 
-1. Client Proposal Generator
-2. HRA Calculator
-3. Advance Tax Calculator
-4. GST Late Fee Calculator
-5. Business Letterhead Generator
+1. HRA Calculator
+2. Advance Tax Calculator
+3. GST Late Fee Calculator
+4. Business Letterhead Generator
+5. Work Order Generator
 
 ## SEO Tasks
 
 1. Check Search Console after 24–48 hours.
 2. Monitor indexed pages, discovered pages, crawled but not indexed, impressions and queries.
-3. Add supporting blogs for Board Resolution, Rent Agreement and NDA.
+3. Add supporting blogs for:
+   - Board Resolution formats
+   - Rent Agreement for GST address proof
+   - NDA meaning and format
+   - Business proposal format
 4. Improve service pages for GST Registration, Trademark Registration, Company Registration, Payroll Support and Custom Business Tools.

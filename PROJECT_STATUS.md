@@ -45,6 +45,7 @@ The website includes homepage, free tools page, services page, blog page, about 
 16. Full & Final Settlement Calculator
 17. Board Resolution Generator
 18. Rent Agreement Draft Generator
+19. NDA Generator
 
 ## Recently Completed Tools
 
@@ -53,6 +54,9 @@ URL: https://www.adhiniyam.com/tools/board-resolution-generator/
 
 Rent Agreement Draft Generator is live, sitemap updated and indexing requested.  
 URL: https://www.adhiniyam.com/tools/rent-agreement-draft-generator/
+
+NDA Generator is live, sitemap updated and indexing requested.  
+URL: https://www.adhiniyam.com/tools/nda-generator/
 
 ## Blog Status
 
@@ -123,11 +127,10 @@ Fix:
 ## Recommended Next Workflow
 
 Next planned tool:
-1. NDA Generator
+1. Client Proposal Generator
 
-Suggested tools after NDA:
-2. Client Proposal Generator
-3. HRA Calculator
-4. Advance Tax Calculator
-5. GST Late Fee Calculator
-
+Suggested tools after Client Proposal:
+2. HRA Calculator
+3. Advance Tax Calculator
+4. GST Late Fee Calculator
+5. Business Letterhead Generator

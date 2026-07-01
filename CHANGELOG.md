@@ -43,6 +43,7 @@
 - New Joiner Salary Calculator
 - Board Resolution Generator
 - Rent Agreement Draft Generator
+- NDA Generator
 
 ### Blogs Added
 - Initial SEO blog pages added.
@@ -52,6 +53,7 @@
 ### Latest Completed
 - Board Resolution Generator completed, sitemap updated and indexing requested.
 - Rent Agreement Draft Generator completed, sitemap updated and indexing requested.
+- NDA Generator completed, sitemap updated and indexing requested.
 
 ### Next Planned
-- NDA Generator
+- Client Proposal Generator
