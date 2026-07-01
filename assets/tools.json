@@ -225,6 +225,21 @@
     "showOnHome": false
   },
   {
+    "name": "Credit Note / Debit Note Generator",
+    "slug": "credit-note-debit-note-generator",
+    "category": "Business Tools",
+    "status": "Live",
+    "description": "Create professional credit notes and debit notes with original invoice reference, reason, item-wise GST adjustment and PDF download.",
+    "url": "/tools/credit-note-debit-note-generator/",
+    "cta": "Use Tool",
+    "relatedService": "GST Registration & Filing",
+    "relatedServiceUrl": "/services/gst-registration/",
+    "tag": "Business Tools",
+    "icon": "CreditDebit",
+    "order": 16,
+    "showOnHome": false
+  },
+  {
     "name": "Rent Agreement Draft Generator",
     "slug": "rent-agreement-draft-generator",
     "category": "Legal & Documents",
