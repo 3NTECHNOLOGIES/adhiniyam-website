@@ -25,6 +25,51 @@
     .hra-preview{background:#fff;color:#111827;max-width:850px;margin:0 auto;border:1px solid #E5E7EB;box-shadow:0 12px 35px rgba(15,30,61,.10);padding:36px;line-height:1.58;font-family:Arial,sans-serif}
     .hra-preview h2{text-align:center;font-size:23px;margin:0 0 8px;text-transform:uppercase;color:#0F1E3D}.hra-preview table{width:100%;border-collapse:collapse;margin:16px 0}.hra-preview th,.hra-preview td{border:1px solid #D1D5DB;padding:8px;font-size:13px}.hra-preview th{background:#EAF1FF;color:#0F1E3D}.hra-preview .total{font-size:18px;font-weight:900;color:#0F1E3D}
     @media(max-width:920px){.result-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:760px){.tool-form{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr}.hra-preview{padding:22px}}
+  .chip-row,
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  margin-top: 24px;
+  align-items: center;
+}
+
+.chip-row span,
+.chips span {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #dbe7ff;
+  color: #243b63;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.06);
+}
+
+.chip-row span::before,
+.chips span::before {
+  content: "✓";
+  color: #16a34a;
+  font-weight: 900;
+  margin-right: 6px;
+}
+
+@media (max-width: 640px) {
+  .chip-row,
+  .chips {
+    margin-top: 18px;
+    gap: 8px;
+  }
+
+  .chip-row span,
+  .chips span {
+    font-size: 13.5px;
+    padding: 8px 11px;
+  }
+}
   </style>
 </head>
 <body><header id="site-header"></header>
