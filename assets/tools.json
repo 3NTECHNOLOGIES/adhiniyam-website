@@ -283,5 +283,20 @@
     "icon": "NDA",
     "order": 19,
     "showOnHome": false
+  },
+  {
+    "name": "Client Proposal Generator",
+    "slug": "client-proposal-generator",
+    "category": "Business Tools",
+    "status": "Live",
+    "description": "Create professional client proposals with scope, deliverables, timeline, pricing, payment terms, assumptions, acceptance section and PDF download.",
+    "url": "/tools/client-proposal-generator/",
+    "cta": "Use Tool",
+    "relatedService": "Custom Business Tools",
+    "relatedServiceUrl": "/services/custom-business-tools/",
+    "tag": "Business Tools",
+    "icon": "Proposal",
+    "order": 20,
+    "showOnHome": false
   }
 ]
