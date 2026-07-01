@@ -19,7 +19,7 @@
     "slug": "new-joiner-salary-calculator",
     "category": "HR & Payroll",
     "status": "Live",
-    "description": "Calculate first-month salary for new employees with joining date, paid days, PF, ESIC, TDS, deductions and net payable PDF.",
+    "description": "Calculate new employee salary using full salary, joining-date pro-rata or manual payable days with custom allowances, PF, ESIC, TDS and PDF summary.",
     "url": "/tools/new-joiner-salary-calculator/",
     "cta": "Use Tool",
     "relatedService": "Payroll Support",
