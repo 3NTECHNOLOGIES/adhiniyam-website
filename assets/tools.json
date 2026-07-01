@@ -15,6 +15,21 @@
     "showOnHome": true
   },
   {
+    "name": "New Joiner Salary Calculator",
+    "slug": "new-joiner-salary-calculator",
+    "category": "HR & Payroll",
+    "status": "Live",
+    "description": "Calculate first-month salary for new employees with joining date, paid days, PF, ESIC, TDS, deductions and net payable PDF.",
+    "url": "/tools/new-joiner-salary-calculator/",
+    "cta": "Use Tool",
+    "relatedService": "Payroll Support",
+    "relatedServiceUrl": "/services/payroll-support/",
+    "tag": "Popular",
+    "icon": "NewSalary",
+    "order": 2,
+    "showOnHome": true
+  },
+  {
     "name": "Invoice Generator",
     "slug": "invoice-generator",
     "category": "Business Tools",
@@ -26,7 +41,7 @@
     "relatedServiceUrl": "/services/gst-registration/",
     "tag": "Popular",
     "icon": "Invoice",
-    "order": 2,
+    "order": 3,
     "showOnHome": true
   },
   {
@@ -41,7 +56,7 @@
     "relatedServiceUrl": "/services/gst-registration/",
     "tag": "Popular",
     "icon": "GST",
-    "order": 3,
+    "order": 4,
     "showOnHome": true
   },
   {
@@ -56,7 +71,7 @@
     "relatedServiceUrl": "/services/payroll-support/",
     "tag": "Popular",
     "icon": "PF",
-    "order": 4,
+    "order": 5,
     "showOnHome": true
   },
   {
@@ -71,7 +86,7 @@
     "relatedServiceUrl": "/services/payroll-support/",
     "tag": "Popular",
     "icon": "Offer",
-    "order": 5,
+    "order": 6,
     "showOnHome": true
   },
   {
@@ -86,7 +101,7 @@
     "relatedServiceUrl": "/services/payroll-support/",
     "tag": "Popular",
     "icon": "Appointment",
-    "order": 6,
+    "order": 7,
     "showOnHome": true
   },
   {
@@ -101,7 +116,7 @@
     "relatedServiceUrl": "/services/payroll-support/",
     "tag": "Popular",
     "icon": "Experience",
-    "order": 7,
+    "order": 8,
     "showOnHome": false
   },
   {
@@ -116,7 +131,7 @@
     "relatedServiceUrl": "/services/payroll-support/",
     "tag": "Popular",
     "icon": "Relieving",
-    "order": 8,
+    "order": 9,
     "showOnHome": false
   },
   {
@@ -131,7 +146,7 @@
     "relatedServiceUrl": "/services/custom-business-tools/",
     "tag": "Popular",
     "icon": "Quote",
-    "order": 9,
+    "order": 10,
     "showOnHome": false
   },
   {
@@ -146,7 +161,7 @@
     "relatedServiceUrl": "/services/",
     "tag": "Popular",
     "icon": "TDS",
-    "order": 10,
+    "order": 11,
     "showOnHome": false
   },
   {
@@ -161,7 +176,7 @@
     "relatedServiceUrl": "/services/payroll-support/",
     "tag": "Popular",
     "icon": "FNF",
-    "order": 11,
+    "order": 12,
     "showOnHome": false
   },
   {
@@ -176,7 +191,7 @@
     "relatedServiceUrl": "/services/",
     "tag": "Popular",
     "icon": "Receipt",
-    "order": 12,
+    "order": 13,
     "showOnHome": false
   },
   {
@@ -191,7 +206,7 @@
     "relatedServiceUrl": "/services/",
     "tag": "Popular",
     "icon": "PO",
-    "order": 13,
+    "order": 14,
     "showOnHome": false
   },
   {
@@ -206,7 +221,7 @@
     "relatedServiceUrl": "/services/",
     "tag": "Coming Soon",
     "icon": "Agreement",
-    "order": 15,
+    "order": 16,
     "showOnHome": false
   },
   {
@@ -221,7 +236,7 @@
     "relatedServiceUrl": "/services/company-registration/",
     "tag": "Coming Soon",
     "icon": "Resolution",
-    "order": 16,
+    "order": 17,
     "showOnHome": false
   },
   {
@@ -236,7 +251,7 @@
     "relatedServiceUrl": "/services/",
     "tag": "Coming Soon",
     "icon": "NDA",
-    "order": 17,
+    "order": 18,
     "showOnHome": false
   }
 ]
