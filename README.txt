@@ -8,3 +8,6 @@ Safe upload method:
 3. Upload index.html, sitemap.xml and README.txt on the root repo page.
 4. Upload tools/index.html inside the tools folder.
 5. Wait for Vercel deployment to show Ready, then test the live URL.
+
+
+Revision: Removed separate DA wording for private-company salary structures, added full-month salary mode, manual payable-days mode, and custom allowance fields.
