@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon.png">
-  <link rel="stylesheet" href="/assets/style.css?v=income-tax-calculator-20260702">
+  <link rel="stylesheet" href="/assets/style.css?v=income-tax-calculator-20260702-pdf">
   <style>
     :root{--it-blue:#0b4aa2;--it-dark:#10233f;--it-soft:#eef6ff;--it-green:#16a34a;--it-border:#dbe8f7;--it-muted:#5e6b80;--it-red:#dc2626;}
     .tax-tool-wrap{padding:34px 0 60px}.tax-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:start}.tool-card{background:#fff;border:1px solid var(--it-border);border-radius:22px;box-shadow:0 18px 45px rgba(16,35,63,.08);padding:24px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.field{display:flex;flex-direction:column;gap:7px}.field label{font-weight:700;color:var(--it-dark);font-size:.94rem}.field small{color:var(--it-muted);line-height:1.45}.field input,.field select{width:100%;border:1px solid #cbdaf0;border-radius:13px;padding:13px 14px;font-size:1rem;background:#fff;color:#14213d}.field input:focus,.field select:focus{outline:3px solid rgba(11,74,162,.12);border-color:#0b4aa2}.full{grid-column:1/-1}.switch-row{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid var(--it-border);background:#f8fbff;border-radius:15px;padding:14px}.switch-row strong{display:block;color:var(--it-dark)}.switch-row span{display:block;color:var(--it-muted);font-size:.9rem;margin-top:3px}.action-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}.result-hero{background:linear-gradient(135deg,#0b4aa2,#163b7a);color:#fff;border-radius:22px;padding:22px;margin-bottom:16px}.result-hero span{opacity:.9}.result-hero strong{display:block;font-size:2rem;margin-top:8px}.result-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.result-box{border:1px solid var(--it-border);border-radius:18px;padding:16px;background:#fff}.result-box .label{color:var(--it-muted);font-size:.9rem}.result-box .value{display:block;font-weight:800;color:var(--it-dark);font-size:1.35rem;margin-top:6px}.result-box.good .value{color:var(--it-green)}.result-box.warn .value{color:#b45309}.compare-table{width:100%;border-collapse:separate;border-spacing:0;margin-top:16px;border:1px solid var(--it-border);border-radius:16px;overflow:hidden}.compare-table th,.compare-table td{padding:12px;border-bottom:1px solid var(--it-border);text-align:left}.compare-table th{background:#eef6ff;color:#10233f}.compare-table tr:last-child td{border-bottom:0}.badge-line{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}.mini-badge{display:inline-flex;align-items:center;gap:8px;background:#eef6ff;border:1px solid #d6e8ff;border-radius:999px;padding:8px 12px;color:#173b68;font-weight:700;font-size:.9rem}.note-box{background:#fff8e6;border:1px solid #f4d58d;border-radius:16px;padding:14px;color:#5a4211;line-height:1.55}.slab-list{display:grid;gap:10px;margin-top:12px}.slab-list div{display:flex;justify-content:space-between;gap:14px;border:1px solid var(--it-border);border-radius:13px;padding:11px 13px;background:#fff}.slab-list span{color:var(--it-muted)}.faq-item{background:#fff;border:1px solid var(--it-border);border-radius:18px;padding:18px}.faq-item h3{margin-top:0}.muted{color:var(--it-muted)}.tax-highlight{background:linear-gradient(135deg,#eef6ff,#ffffff);border:1px solid #d8eaff;border-radius:18px;padding:18px}.print-summary{display:none}.error-msg{color:var(--it-red);font-weight:700;margin-top:10px}.hidden{display:none!important}@media(max-width:900px){.tax-grid{grid-template-columns:1fr}.form-grid,.result-grid{grid-template-columns:1fr}.hero .btn-row,.action-row{align-items:stretch}.hero .btn-row .btn,.action-row .btn{width:100%;text-align:center}.switch-row{align-items:flex-start;flex-direction:column}}@media print{header,footer,.hero,.action-row,.blue-section,.faq-section,.no-print{display:none!important}.tool-card{box-shadow:none;border:1px solid #bbb}.tax-grid{display:block}.print-summary{display:block}}
@@ -136,7 +136,8 @@
           <div class="action-row">
             <button class="btn primary" id="calculateBtn" type="button">Calculate Tax</button>
             <button class="btn secondary" id="resetBtn" type="button">Reset</button>
-            <button class="btn green" id="printBtn" type="button">Print / Save PDF</button>
+            <button class="btn green" id="downloadPdfBtn" type="button">Download PDF Computation</button>
+            <button class="btn secondary" id="printBtn" type="button">Print / Save PDF</button>
           </div>
         </section>
 
@@ -229,10 +230,13 @@
   </main>
   <footer id="site-footer" class="site-footer"></footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     const $ = (id) => document.getElementById(id);
     const fmt = (n) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(Math.round(Math.max(0, Number(n) || 0)));
+    const pdfFmt = (n) => 'Rs. ' + new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(Math.max(0, Number(n) || 0)));
     const num = (id) => Math.max(0, Number($(id).value) || 0);
+    let lastCalculation = null;
 
     function slabTax(amount, slabs){
       let tax = 0;
@@ -329,6 +333,142 @@
         ['Estimated tax payable', oldR.total, newR.total]
       ];
       $('comparisonRows').innerHTML = rows.map(r => `<tr><td>${r[0]}</td><td>${fmt(r[1])}</td><td>${fmt(r[2])}</td></tr>`).join('');
+      lastCalculation = { inputs, oldR, newR, best, saving, rows };
+      return lastCalculation;
+    }
+
+    function downloadComputationPDF(){
+      const data = calculate() || lastCalculation;
+      if(!data) return;
+      if(!window.jspdf || !window.jspdf.jsPDF){
+        alert('PDF library could not load. Please use Print / Save PDF option.');
+        window.print();
+        return;
+      }
+
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+      const pageWidth = doc.internal.pageSize.getWidth();
+      const pageHeight = doc.internal.pageSize.getHeight();
+      const margin = 14;
+      let y = 16;
+
+      function addFooter(){
+        doc.setFontSize(8);
+        doc.setTextColor(90, 98, 112);
+        doc.text('Generated from Adhiniyam Income Tax Calculator - www.adhiniyam.com', margin, pageHeight - 9);
+      }
+
+      function ensureSpace(height){
+        if(y + height > pageHeight - 18){
+          addFooter();
+          doc.addPage();
+          y = 16;
+        }
+      }
+
+      function line(text, size = 10, bold = false, color = [20, 33, 61]){
+        ensureSpace(8);
+        doc.setFont('helvetica', bold ? 'bold' : 'normal');
+        doc.setFontSize(size);
+        doc.setTextColor(color[0], color[1], color[2]);
+        const wrapped = doc.splitTextToSize(String(text), pageWidth - margin * 2);
+        doc.text(wrapped, margin, y);
+        y += wrapped.length * (size * 0.36) + 3;
+      }
+
+      function sectionTitle(text){
+        ensureSpace(12);
+        y += 2;
+        doc.setFillColor(238, 246, 255);
+        doc.roundedRect(margin, y - 5, pageWidth - margin * 2, 9, 2, 2, 'F');
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(11);
+        doc.setTextColor(11, 74, 162);
+        doc.text(text, margin + 3, y + 1);
+        y += 9;
+      }
+
+      function keyValue(label, value){
+        ensureSpace(7);
+        doc.setFontSize(10);
+        doc.setFont('helvetica', 'bold');
+        doc.setTextColor(16, 35, 63);
+        doc.text(String(label), margin, y);
+        doc.setFont('helvetica', 'normal');
+        doc.text(String(value), margin + 76, y);
+        y += 6;
+      }
+
+      function table(rows){
+        const x = margin;
+        const widths = [76, 50, 50];
+        const rowH = 8;
+        ensureSpace(rowH * 2);
+        doc.setFillColor(11, 74, 162);
+        doc.setTextColor(255, 255, 255);
+        doc.setFont('helvetica', 'bold');
+        doc.rect(x, y, widths[0] + widths[1] + widths[2], rowH, 'F');
+        doc.text('Particulars', x + 2, y + 5.3);
+        doc.text('Old Regime', x + widths[0] + 2, y + 5.3);
+        doc.text('New Regime', x + widths[0] + widths[1] + 2, y + 5.3);
+        y += rowH;
+
+        rows.forEach((r, idx) => {
+          ensureSpace(rowH);
+          if(idx % 2 === 0){
+            doc.setFillColor(248, 251, 255);
+            doc.rect(x, y, widths[0] + widths[1] + widths[2], rowH, 'F');
+          }
+          doc.setDrawColor(219, 232, 247);
+          doc.rect(x, y, widths[0] + widths[1] + widths[2], rowH, 'S');
+          doc.setTextColor(20, 33, 61);
+          doc.setFont('helvetica', 'normal');
+          doc.text(String(r[0]), x + 2, y + 5.3);
+          doc.text(pdfFmt(r[1]), x + widths[0] + 2, y + 5.3);
+          doc.text(pdfFmt(r[2]), x + widths[0] + widths[1] + 2, y + 5.3);
+          y += rowH;
+        });
+      }
+
+      doc.setFillColor(11, 74, 162);
+      doc.rect(0, 0, pageWidth, 28, 'F');
+      doc.setTextColor(255, 255, 255);
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(17);
+      doc.text('Income Tax Computation', margin, 13);
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(10);
+      doc.text('FY 2025-26 / AY 2026-27 - Old vs New Regime Comparison', margin, 21);
+      y = 38;
+
+      sectionTitle('Summary');
+      keyValue('Recommended regime', data.newR.total === data.oldR.total ? 'Both regimes are equal' : data.best);
+      keyValue('Estimated saving', data.newR.total === data.oldR.total ? 'Nil' : pdfFmt(data.saving));
+      keyValue('Old regime tax payable', pdfFmt(data.oldR.total));
+      keyValue('New regime tax payable', pdfFmt(data.newR.total));
+      keyValue('Generated on', new Date().toLocaleDateString('en-IN'));
+
+      sectionTitle('Input Details');
+      keyValue('Annual gross income', pdfFmt(data.inputs.income));
+      keyValue('Age category', $('ageGroup').options[$('ageGroup').selectedIndex].text);
+      keyValue('Income type', $('taxpayerType').options[$('taxpayerType').selectedIndex].text);
+      keyValue('Old deductions', pdfFmt(data.inputs.oldExtra));
+      keyValue('HRA / home loan benefits', pdfFmt(data.inputs.oldHraHome));
+      keyValue('Professional tax', pdfFmt(data.inputs.professionalTax));
+      keyValue('New allowed deductions', pdfFmt(data.inputs.newAllowed));
+      keyValue('Resident rebate applied', data.inputs.resident ? 'Yes' : 'No');
+
+      sectionTitle('Detailed Computation');
+      table(data.rows);
+
+      sectionTitle('Important Notes');
+      line('This computation is an estimate for planning and educational use only. Final tax may vary due to surcharge marginal relief, special-rate income, capital gains, perquisites, exemptions, business income, foreign income, and return-filing rules.', 9, false, [90, 98, 112]);
+      line('For ITR filing or case-specific advice, consult a tax professional.', 9, false, [90, 98, 112]);
+      addFooter();
+
+      const datePart = new Date().toISOString().slice(0, 10);
+      doc.save('Adhiniyam-Income-Tax-Computation-' + datePart + '.pdf');
     }
 
     function resetForm(){
@@ -349,9 +489,10 @@
     });
     $('calculateBtn').addEventListener('click', calculate);
     $('resetBtn').addEventListener('click', resetForm);
+    $('downloadPdfBtn').addEventListener('click', downloadComputationPDF);
     $('printBtn').addEventListener('click', () => window.print());
     calculate();
   </script>
-  <script src="/assets/common.js?v=income-tax-calculator-20260702"></script>
+  <script src="/assets/common.js?v=income-tax-calculator-20260702-pdf"></script>
 </body>
 </html>
