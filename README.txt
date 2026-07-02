@@ -19,6 +19,7 @@ What this tool does:
 - Allows old regime deduction inputs and selected new regime allowed deduction input.
 - Applies Section 87A rebate estimate, surcharge estimate and 4% health & education cess.
 - Shows recommended regime, estimated saving and detailed tax breakup.
+- Includes Download PDF Computation button for saving a tax computation summary.
 
 Important disclaimer:
 This calculator is for basic planning and educational use only. It is not a substitute for professional tax advice or official income-tax return computation. Final tax may vary due to special-rate income, capital gains, surcharge marginal relief, exemptions, business income, foreign income, and other return-filing rules.
@@ -31,6 +32,7 @@ Upload order:
 
 After Vercel deployment:
 - Test https://www.adhiniyam.com/tools/income-tax-calculator/
+- Test Download PDF Computation button after calculation.
 - Test https://www.adhiniyam.com/tools/
 - Test https://www.adhiniyam.com/sitemap.xml
 - Submit sitemap in Google Search Console.
