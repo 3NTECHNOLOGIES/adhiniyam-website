@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Income Tax Calculator AY 2026-27 | Old vs New Regime Comparison | Adhiniyam</title>
+  <meta name="description" content="Free Income Tax Calculator for India. Compare old vs new tax regime for AY 2026-27 with standard deduction, deductions, rebate, cess and estimated tax payable.">
+  <link rel="canonical" href="https://www.adhiniyam.com/tools/income-tax-calculator/">
+  <meta property="og:title" content="Income Tax Calculator AY 2026-27 | Old vs New Regime Comparison">
+  <meta property="og:description" content="Compare old and new income tax regime for India with deductions, rebate and cess.">
+  <meta property="og:image" content="https://www.adhiniyam.com/tools/income-tax-calculator/og-image.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.png">
+  <link rel="stylesheet" href="/assets/style.css?v=income-tax-calculator-20260702">
+  <style>
+    :root{--it-blue:#0b4aa2;--it-dark:#10233f;--it-soft:#eef6ff;--it-green:#16a34a;--it-border:#dbe8f7;--it-muted:#5e6b80;--it-red:#dc2626;}
+    .tax-tool-wrap{padding:34px 0 60px}.tax-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:start}.tool-card{background:#fff;border:1px solid var(--it-border);border-radius:22px;box-shadow:0 18px 45px rgba(16,35,63,.08);padding:24px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.field{display:flex;flex-direction:column;gap:7px}.field label{font-weight:700;color:var(--it-dark);font-size:.94rem}.field small{color:var(--it-muted);line-height:1.45}.field input,.field select{width:100%;border:1px solid #cbdaf0;border-radius:13px;padding:13px 14px;font-size:1rem;background:#fff;color:#14213d}.field input:focus,.field select:focus{outline:3px solid rgba(11,74,162,.12);border-color:#0b4aa2}.full{grid-column:1/-1}.switch-row{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid var(--it-border);background:#f8fbff;border-radius:15px;padding:14px}.switch-row strong{display:block;color:var(--it-dark)}.switch-row span{display:block;color:var(--it-muted);font-size:.9rem;margin-top:3px}.action-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}.result-hero{background:linear-gradient(135deg,#0b4aa2,#163b7a);color:#fff;border-radius:22px;padding:22px;margin-bottom:16px}.result-hero span{opacity:.9}.result-hero strong{display:block;font-size:2rem;margin-top:8px}.result-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.result-box{border:1px solid var(--it-border);border-radius:18px;padding:16px;background:#fff}.result-box .label{color:var(--it-muted);font-size:.9rem}.result-box .value{display:block;font-weight:800;color:var(--it-dark);font-size:1.35rem;margin-top:6px}.result-box.good .value{color:var(--it-green)}.result-box.warn .value{color:#b45309}.compare-table{width:100%;border-collapse:separate;border-spacing:0;margin-top:16px;border:1px solid var(--it-border);border-radius:16px;overflow:hidden}.compare-table th,.compare-table td{padding:12px;border-bottom:1px solid var(--it-border);text-align:left}.compare-table th{background:#eef6ff;color:#10233f}.compare-table tr:last-child td{border-bottom:0}.badge-line{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}.mini-badge{display:inline-flex;align-items:center;gap:8px;background:#eef6ff;border:1px solid #d6e8ff;border-radius:999px;padding:8px 12px;color:#173b68;font-weight:700;font-size:.9rem}.note-box{background:#fff8e6;border:1px solid #f4d58d;border-radius:16px;padding:14px;color:#5a4211;line-height:1.55}.slab-list{display:grid;gap:10px;margin-top:12px}.slab-list div{display:flex;justify-content:space-between;gap:14px;border:1px solid var(--it-border);border-radius:13px;padding:11px 13px;background:#fff}.slab-list span{color:var(--it-muted)}.faq-item{background:#fff;border:1px solid var(--it-border);border-radius:18px;padding:18px}.faq-item h3{margin-top:0}.muted{color:var(--it-muted)}.tax-highlight{background:linear-gradient(135deg,#eef6ff,#ffffff);border:1px solid #d8eaff;border-radius:18px;padding:18px}.print-summary{display:none}.error-msg{color:var(--it-red);font-weight:700;margin-top:10px}.hidden{display:none!important}@media(max-width:900px){.tax-grid{grid-template-columns:1fr}.form-grid,.result-grid{grid-template-columns:1fr}.hero .btn-row,.action-row{align-items:stretch}.hero .btn-row .btn,.action-row .btn{width:100%;text-align:center}.switch-row{align-items:flex-start;flex-direction:column}}@media print{header,footer,.hero,.action-row,.blue-section,.faq-section,.no-print{display:none!important}.tool-card{box-shadow:none;border:1px solid #bbb}.tax-grid{display:block}.print-summary{display:block}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"Income Tax Calculator",
+    "url":"https://www.adhiniyam.com/tools/income-tax-calculator/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"Any",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},
+    "description":"Free India income tax calculator to compare old and new tax regime for AY 2026-27."
+  }
+  </script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Free Tax Tool for India</span>
+          <h1>Income Tax Calculator with Old vs New Regime Comparison</h1>
+          <p>Estimate income tax payable for AY 2026-27 and instantly compare the old tax regime with the new tax regime using salary, deductions, rebate and cess.</p>
+          <div class="badge-line">
+            <span class="mini-badge">AY 2026-27</span>
+            <span class="mini-badge">Old vs New</span>
+            <span class="mini-badge">4% Cess</span>
+            <span class="mini-badge">87A Rebate</span>
+          </div>
+          <div class="btn-row">
+            <a class="btn primary" href="#calculator">Calculate Tax</a>
+            <a class="btn secondary" href="/tools/">All Tools</a>
+            <a class="btn green" href="/contact/">Get Tax Support</a>
+          </div>
+        </div>
+        <div class="mockup">
+          <div class="mockup-head"><strong>Tax Comparison</strong></div>
+          <div class="mock-grid">
+            <div class="mini-card big-stat"><strong>₹0</strong><span>Estimated tax payable after rebate and cess</span></div>
+            <div class="mini-card"><strong>New Regime</strong><span>Default tax regime</span></div>
+            <div class="mini-card"><strong>Old Regime</strong><span>Deductions based regime</span></div>
+            <div class="mini-card"><strong>Recommendation</strong><span>Lower tax option</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="calculator" class="container tax-tool-wrap">
+      <div class="tax-grid">
+        <section class="tool-card">
+          <span class="eyebrow">Calculator Inputs</span>
+          <h2>Enter Income Details</h2>
+          <p class="muted">Use annual figures. This tool is designed for resident individual taxpayers and salaried/pension income estimates.</p>
+
+          <div class="form-grid" id="taxForm">
+            <div class="field full">
+              <label for="income">Annual gross salary / total income before deductions</label>
+              <input id="income" type="number" min="0" step="1000" value="1200000" inputmode="decimal" aria-describedby="incomeHelp">
+              <small id="incomeHelp">Enter salary or regular income before standard deduction and Chapter VI-A deductions.</small>
+            </div>
+
+            <div class="field">
+              <label for="ageGroup">Age category</label>
+              <select id="ageGroup">
+                <option value="below60">Below 60 years</option>
+                <option value="senior">Senior citizen: 60 to 79 years</option>
+                <option value="superSenior">Super senior citizen: 80+ years</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="taxpayerType">Income type</label>
+              <select id="taxpayerType">
+                <option value="salary">Salary / pension</option>
+                <option value="other">Other individual income</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="oldDeductions">Old regime deductions</label>
+              <input id="oldDeductions" type="number" min="0" step="1000" value="150000" inputmode="decimal">
+              <small>Example: 80C, 80D, 80CCD(1B), eligible donations, etc.</small>
+            </div>
+
+            <div class="field">
+              <label for="hraHome">HRA / home loan / other old regime benefits</label>
+              <input id="hraHome" type="number" min="0" step="1000" value="0" inputmode="decimal">
+              <small>Add eligible HRA exemption, home loan interest set-off and similar old regime benefits.</small>
+            </div>
+
+            <div class="field">
+              <label for="professionalTax">Professional tax</label>
+              <input id="professionalTax" type="number" min="0" step="100" value="0" inputmode="decimal">
+              <small>Usually claimable under old regime for salaried taxpayers, where applicable.</small>
+            </div>
+
+            <div class="field">
+              <label for="newAllowed">New regime allowed deductions</label>
+              <input id="newAllowed" type="number" min="0" step="1000" value="0" inputmode="decimal">
+              <small>Example: eligible employer NPS contribution u/s 80CCD(2), if applicable.</small>
+            </div>
+
+            <div class="field full">
+              <div class="switch-row">
+                <div>
+                  <strong>Resident individual rebate</strong>
+                  <span>Apply Section 87A rebate where taxable income is within the applicable limit.</span>
+                </div>
+                <select id="resident">
+                  <option value="yes">Yes, resident individual</option>
+                  <option value="no">No / do not apply rebate</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div id="errorBox" class="error-msg hidden"></div>
+          <div class="action-row">
+            <button class="btn primary" id="calculateBtn" type="button">Calculate Tax</button>
+            <button class="btn secondary" id="resetBtn" type="button">Reset</button>
+            <button class="btn green" id="printBtn" type="button">Print / Save PDF</button>
+          </div>
+        </section>
+
+        <aside class="tool-card" aria-live="polite">
+          <span class="eyebrow">Result</span>
+          <h2>Tax Comparison Summary</h2>
+          <div class="result-hero">
+            <span id="recommendationLabel">Recommended option</span>
+            <strong id="bestRegime">New Regime</strong>
+            <span id="savingText">Estimated saving: ₹0</span>
+          </div>
+          <div class="result-grid">
+            <div class="result-box good"><span class="label">New Regime Tax</span><strong class="value" id="newTax">₹0</strong></div>
+            <div class="result-box"><span class="label">Old Regime Tax</span><strong class="value" id="oldTax">₹0</strong></div>
+            <div class="result-box"><span class="label">New Taxable Income</span><strong class="value" id="newTaxable">₹0</strong></div>
+            <div class="result-box"><span class="label">Old Taxable Income</span><strong class="value" id="oldTaxable">₹0</strong></div>
+          </div>
+
+          <table class="compare-table" aria-label="Income tax comparison details">
+            <thead><tr><th>Particulars</th><th>Old Regime</th><th>New Regime</th></tr></thead>
+            <tbody id="comparisonRows"></tbody>
+          </table>
+
+          <div class="note-box" style="margin-top:16px">
+            This is an estimate for planning only. Final tax may change due to surcharge marginal relief, special-rate income, capital gains, employer perquisites, exemptions and return-filing rules.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container">
+        <div class="text-center mb-36">
+          <span class="eyebrow">Tax Slabs Used</span>
+          <h2>AY 2026-27 Slab Reference</h2>
+          <p class="lead" style="margin:auto">The calculator uses the latest slab structure for individual taxpayers for FY 2025-26 / AY 2026-27.</p>
+        </div>
+        <div class="grid grid-2">
+          <article class="tax-highlight">
+            <h3>New Tax Regime</h3>
+            <div class="slab-list">
+              <div><strong>Up to ₹4,00,000</strong><span>Nil</span></div>
+              <div><strong>₹4,00,001 – ₹8,00,000</strong><span>5%</span></div>
+              <div><strong>₹8,00,001 – ₹12,00,000</strong><span>10%</span></div>
+              <div><strong>₹12,00,001 – ₹16,00,000</strong><span>15%</span></div>
+              <div><strong>₹16,00,001 – ₹20,00,000</strong><span>20%</span></div>
+              <div><strong>₹20,00,001 – ₹24,00,000</strong><span>25%</span></div>
+              <div><strong>Above ₹24,00,000</strong><span>30%</span></div>
+            </div>
+          </article>
+          <article class="tax-highlight">
+            <h3>Old Tax Regime</h3>
+            <div class="slab-list">
+              <div><strong>Below 60: up to ₹2,50,000</strong><span>Nil</span></div>
+              <div><strong>Senior citizen: up to ₹3,00,000</strong><span>Nil</span></div>
+              <div><strong>Super senior: up to ₹5,00,000</strong><span>Nil</span></div>
+              <div><strong>Next slab up to ₹5,00,000</strong><span>5%</span></div>
+              <div><strong>₹5,00,001 – ₹10,00,000</strong><span>20%</span></div>
+              <div><strong>Above ₹10,00,000</strong><span>30%</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <div class="container">
+        <div class="text-center mb-36">
+          <span class="eyebrow">FAQs</span>
+          <h2>Income Tax Calculator FAQs</h2>
+        </div>
+        <div class="grid grid-2">
+          <article class="faq-item"><h3>Which assessment year does this calculator support?</h3><p>It supports FY 2025-26 / AY 2026-27 slab comparison for resident individual taxpayers.</p></article>
+          <article class="faq-item"><h3>Does the calculator apply standard deduction?</h3><p>Yes. If salary / pension is selected, it applies ₹50,000 under old regime and ₹75,000 under new regime, limited to the entered income.</p></article>
+          <article class="faq-item"><h3>Does the new regime allow all deductions?</h3><p>No. The new regime allows only selected deductions. Use the new regime allowed deduction field only for deductions that are actually permitted for your case.</p></article>
+          <article class="faq-item"><h3>Is this a substitute for tax filing advice?</h3><p>No. This is a quick estimate. For ITR filing, capital gains, business income, surcharge, foreign income or special income, consult a tax professional.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section blue-section">
+      <div class="container">
+        <div class="grid grid-3">
+          <article class="card"><h3>Need ITR or tax support?</h3><p>Get help with income tax return filing, deductions and compliance review.</p><a class="btn primary" href="/contact/">Contact Adhiniyam</a></article>
+          <article class="card"><h3>Need payroll support?</h3><p>Calculate salary, deductions, PF/ESIC and monthly payroll compliance.</p><a class="btn primary" href="/services/payroll-support/">Payroll Support</a></article>
+          <article class="card"><h3>Explore more tools</h3><p>Use GST, TDS, HRA, PF/ESIC and business document generators.</p><a class="btn green" href="/tools/">Browse Tools</a></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const fmt = (n) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(Math.round(Math.max(0, Number(n) || 0)));
+    const num = (id) => Math.max(0, Number($(id).value) || 0);
+
+    function slabTax(amount, slabs){
+      let tax = 0;
+      for (const slab of slabs){
+        const lower = slab[0], upper = slab[1], rate = slab[2];
+        if (amount > lower){
+          tax += (Math.min(amount, upper) - lower) * rate;
+        }
+      }
+      return Math.max(0, tax);
+    }
+
+    function oldSlabs(age){
+      if(age === 'senior') return [[300000,500000,.05],[500000,1000000,.20],[1000000,Infinity,.30]];
+      if(age === 'superSenior') return [[500000,1000000,.20],[1000000,Infinity,.30]];
+      return [[250000,500000,.05],[500000,1000000,.20],[1000000,Infinity,.30]];
+    }
+
+    const newSlabs = [[400000,800000,.05],[800000,1200000,.10],[1200000,1600000,.15],[1600000,2000000,.20],[2000000,2400000,.25],[2400000,Infinity,.30]];
+
+    function surchargeRate(income, regime){
+      if(income <= 5000000) return 0;
+      if(income <= 10000000) return .10;
+      if(income <= 20000000) return .15;
+      if(income <= 50000000) return .25;
+      return regime === 'new' ? .25 : .37;
+    }
+
+    function calculateRegime({income, age, isSalary, resident, oldExtra, oldHraHome, professionalTax, newAllowed}, regime){
+      const standard = isSalary ? Math.min(income, regime === 'new' ? 75000 : 50000) : 0;
+      const extra = regime === 'old' ? oldExtra + oldHraHome + professionalTax : newAllowed;
+      const taxable = Math.max(0, income - standard - extra);
+      let baseTax = slabTax(taxable, regime === 'old' ? oldSlabs(age) : newSlabs);
+      let rebate = 0;
+      let marginalRelief87A = 0;
+
+      if(resident){
+        if(regime === 'old' && taxable <= 500000){ rebate = Math.min(baseTax, 12500); }
+        if(regime === 'new' && taxable <= 1200000){ rebate = Math.min(baseTax, 60000); }
+        if(regime === 'new' && taxable > 1200000){
+          const excess = taxable - 1200000;
+          if(baseTax > excess){
+            marginalRelief87A = baseTax - excess;
+            rebate = marginalRelief87A;
+          }
+        }
+      }
+
+      const taxAfterRebate = Math.max(0, baseTax - rebate);
+      const surcharge = taxAfterRebate * surchargeRate(taxable, regime);
+      const cess = (taxAfterRebate + surcharge) * .04;
+      const total = taxAfterRebate + surcharge + cess;
+      return {standard, extra, taxable, baseTax, rebate, surcharge, cess, total};
+    }
+
+    function calculate(){
+      const income = num('income');
+      const errorBox = $('errorBox');
+      if(income < 0){ errorBox.textContent = 'Income cannot be negative.'; errorBox.classList.remove('hidden'); return; }
+      errorBox.classList.add('hidden');
+
+      const inputs = {
+        income,
+        age: $('ageGroup').value,
+        isSalary: $('taxpayerType').value === 'salary',
+        resident: $('resident').value === 'yes',
+        oldExtra: num('oldDeductions'),
+        oldHraHome: num('hraHome'),
+        professionalTax: num('professionalTax'),
+        newAllowed: num('newAllowed')
+      };
+      const oldR = calculateRegime(inputs, 'old');
+      const newR = calculateRegime(inputs, 'new');
+      const best = newR.total <= oldR.total ? 'New Regime' : 'Old Regime';
+      const saving = Math.abs(oldR.total - newR.total);
+
+      $('bestRegime').textContent = best;
+      $('recommendationLabel').textContent = newR.total === oldR.total ? 'Both regimes are equal' : 'Recommended option';
+      $('savingText').textContent = newR.total === oldR.total ? 'Estimated tax is same in both regimes' : 'Estimated saving: ' + fmt(saving);
+      $('newTax').textContent = fmt(newR.total);
+      $('oldTax').textContent = fmt(oldR.total);
+      $('newTaxable').textContent = fmt(newR.taxable);
+      $('oldTaxable').textContent = fmt(oldR.taxable);
+
+      const rows = [
+        ['Gross income', inputs.income, inputs.income],
+        ['Standard deduction', oldR.standard, newR.standard],
+        ['Other deductions / benefits', oldR.extra, newR.extra],
+        ['Taxable income', oldR.taxable, newR.taxable],
+        ['Tax before rebate', oldR.baseTax, newR.baseTax],
+        ['Rebate / marginal relief', oldR.rebate, newR.rebate],
+        ['Surcharge', oldR.surcharge, newR.surcharge],
+        ['Health & education cess', oldR.cess, newR.cess],
+        ['Estimated tax payable', oldR.total, newR.total]
+      ];
+      $('comparisonRows').innerHTML = rows.map(r => `<tr><td>${r[0]}</td><td>${fmt(r[1])}</td><td>${fmt(r[2])}</td></tr>`).join('');
+    }
+
+    function resetForm(){
+      $('income').value = 1200000;
+      $('ageGroup').value = 'below60';
+      $('taxpayerType').value = 'salary';
+      $('oldDeductions').value = 150000;
+      $('hraHome').value = 0;
+      $('professionalTax').value = 0;
+      $('newAllowed').value = 0;
+      $('resident').value = 'yes';
+      calculate();
+    }
+
+    ['income','ageGroup','taxpayerType','oldDeductions','hraHome','professionalTax','newAllowed','resident'].forEach(id => {
+      $(id).addEventListener('input', calculate);
+      $(id).addEventListener('change', calculate);
+    });
+    $('calculateBtn').addEventListener('click', calculate);
+    $('resetBtn').addEventListener('click', resetForm);
+    $('printBtn').addEventListener('click', () => window.print());
+    calculate();
+  </script>
+  <script src="/assets/common.js?v=income-tax-calculator-20260702"></script>
+</body>
+</html>
