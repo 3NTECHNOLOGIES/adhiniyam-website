@@ -328,5 +328,20 @@
     "icon": "PDF",
     "order": 22,
     "showOnHome": false
+  },
+  {
+    "name": "Income Tax Calculator",
+    "slug": "income-tax-calculator",
+    "category": "Tax & Compliance",
+    "status": "Live",
+    "description": "Compare old and new income tax regime for AY 2026-27 with standard deduction, deductions, rebate, cess and estimated tax payable.",
+    "url": "/tools/income-tax-calculator/",
+    "cta": "Use Tool",
+    "relatedService": "Tax & Compliance Support",
+    "relatedServiceUrl": "/services/",
+    "tag": "Tax Tools",
+    "icon": "TDS",
+    "order": 23,
+    "showOnHome": false
   }
 ]
