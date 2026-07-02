@@ -37,3 +37,6 @@ After Vercel deployment:
 - Test https://www.adhiniyam.com/sitemap.xml
 - Submit sitemap in Google Search Console.
 - Request indexing for https://www.adhiniyam.com/tools/income-tax-calculator/
+
+PDF table layout fix:
+- Download PDF Computation now uses dynamic row height, text wrapping and safer page breaks so the bottom table row does not cut text.
