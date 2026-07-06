@@ -74,11 +74,114 @@ function blogCard(b) {
 }
 function renderHeaderFooter() {
   const header = document.getElementById('site-header');
-  if(header) header.innerHTML = `<div class="top-contact-bar"><div class="container top-contact-wrap"><a class="top-contact-link" href="mailto:enquiry@adhiniyam.com"><span class="top-contact-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span><span>enquiry@adhiniyam.com</span></a><div class="top-contact-right"><a class="top-contact-link" href="tel:+919999395031"><span class="top-contact-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.78.68 2.62a2 2 0 0 1-.45 2.11L8 9.94a16 16 0 0 0 6 6l1.49-1.29a2 2 0 0 1 2.11-.45c.84.33 1.72.56 2.62.68A2 2 0 0 1 22 16.92z"></path></svg></span><span>+91 9999395031</span></a></div></div></div><div class="container nav-wrap"><a class="brand" href="/"><img class="brand-logo" src="/assets/logo-icon.png" alt="Adhiniyam logo"><span><span class="brand-name">Adhiniyam</span><span class="brand-tag">Business, Legal & Compliance Tools</span></span></a><nav class="nav-links"><a href="/">Home</a><a href="/tools/">Free Tools</a><a href="/services/">Services</a><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav><div class="header-actions"><a class="btn secondary" href="/tools/">Explore Tools</a><a class="btn green" href="https://wa.me/919999395031?text=Hi%20Adhiniyam%2C%20I%20need%20help%20with%20a%20business%20tool%20or%20compliance%20service." target="_blank" rel="noopener">WhatsApp</a></div><button class="menu-btn" aria-label="Open menu">Menu</button></div>`;
+  if(header) header.innerHTML = `
+    <div class="top-contact-bar" aria-label="Quick contact information">
+      <div class="container top-contact-wrap">
+        <div class="top-contact-note">India-focused business, tax and compliance tools</div>
+        <div class="top-contact-right" aria-label="Contact options">
+          <a class="top-contact-link" href="tel:+919999395031" aria-label="Call Adhiniyam at +91 9999395031">
+            <span class="top-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.78.68 2.62a2 2 0 0 1-.45 2.11L8 9.94a16 16 0 0 0 6 6l1.49-1.29a2 2 0 0 1 2.11-.45c.84.33 1.72.56 2.62.68A2 2 0 0 1 22 16.92z"></path></svg></span>
+            <span>+91 9999395031</span>
+          </a>
+          <a class="top-contact-link top-whatsapp-link" href="https://wa.me/919999395031?text=Hi%20Adhiniyam%2C%20I%20need%20help%20with%20a%20business%20tool%20or%20compliance%20service." target="_blank" rel="noopener" aria-label="Message Adhiniyam on WhatsApp">
+            <span class="top-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-1.22 4.36A8.5 8.5 0 0 1 12.5 20 8.38 8.38 0 0 1 8.14 18.78L3 20l1.22-5.14A8.38 8.38 0 0 1 3 10.5 8.5 8.5 0 0 1 7.14 3.22 8.38 8.38 0 0 1 11.5 2h.5a8.5 8.5 0 0 1 8.5 8.5v1z"></path></svg></span>
+            <span>WhatsApp</span>
+          </a>
+          <a class="top-contact-link" href="mailto:enquiry@adhiniyam.com" aria-label="Email enquiry at adhiniyam dot com">
+            <span class="top-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span>
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container nav-wrap">
+      <a class="brand" href="/" aria-label="Adhiniyam home">
+        <img class="brand-logo" src="/assets/logo-icon.png" alt="Adhiniyam logo">
+        <span class="brand-copy"><span class="brand-name">Adhiniyam</span><span class="brand-tag">Business, Legal & Compliance Tools</span></span>
+      </a>
+      <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/tools/">Tools</a>
+        <a href="/services/">Services</a>
+        <a href="/blog/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn header-cta" href="/contact/">Get Support</a>
+      </div>
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="menu-btn-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="menu-btn-text">Menu</span>
+      </button>
+    </div>`;
+
   const footer = document.getElementById('site-footer');
-  if(footer) footer.innerHTML = `<div class="container"><div class="footer-grid"><div><a class="brand" href="/" style="color:#fff"><img class="brand-logo" src="/assets/logo-icon.png" alt="Adhiniyam logo"><span><span class="brand-name">Adhiniyam</span><span class="brand-tag" style="color:#C7D7F5">Business, Legal & Compliance Tools</span></span></a><p style="margin-top:16px">Adhiniyam is a free business, legal and compliance tools platform for India. It helps businesses create documents, calculate taxes, manage HR paperwork and connect with expert compliance support.</p><p><strong>Email:</strong> <a href="mailto:enquiry@adhiniyam.com" style="color:#C7D7F5">enquiry@adhiniyam.com</a></p><p><strong>Call:</strong> <a href="tel:+919999395031" style="color:#C7D7F5">+91 9999395031</a></p><p><strong>WhatsApp:</strong> <a href="https://wa.me/919999395031?text=Hi%20Adhiniyam%2C%20I%20need%20help%20with%20a%20business%20tool%20or%20compliance%20service." target="_blank" rel="noopener" style="color:#C7D7F5">Message on WhatsApp</a></p></div><div><h4>Free Tools</h4><a href="/tools/salary-slip-generator/">Salary Slip Generator</a><a href="/tools/invoice-generator/">Invoice Generator</a><a href="/tools/gst-calculator/">GST Calculator</a><a href="/tools/tds-calculator/">TDS Calculator</a><a href="/tools/pf-esic-calculator/">PF / ESIC Calculator</a></div><div><h4>Services</h4><a href="/services/gst-registration/">GST Registration</a><a href="/services/company-registration/">Company Registration</a><a href="/services/trademark-registration/">Trademark Registration</a><a href="/services/payroll-support/">Payroll Support</a><a href="/services/custom-business-tools/">Custom Business Tools</a></div><div><h4>Important Links</h4><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/blog/">Blog</a><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms & Conditions</a><a href="/refund-policy/">Refund Policy</a><a href="/disclaimer/">Disclaimer</a></div></div><div class="footer-bottom">The tools available on Adhiniyam are provided for general utility and informational purposes. Users should verify generated documents, calculations and compliance requirements before official use.</div></div>`;
-  const btn = document.querySelector('.menu-btn'), nav = document.querySelector('.nav-wrap');
-  if(btn && nav) btn.addEventListener('click', () => nav.classList.toggle('open'));
+  if(footer) footer.innerHTML = `
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <a class="footer-brand" href="/" aria-label="Adhiniyam home">
+            <img class="brand-logo" src="/assets/logo-icon.png" alt="Adhiniyam logo">
+            <span><span class="brand-name">Adhiniyam</span><span class="brand-tag">Business, Legal & Compliance Tools</span></span>
+          </a>
+          <p class="footer-about">Free business, tax, HR, payroll and compliance tools for Indian workflows, with professional support when needed.</p>
+          <div class="footer-contact-list" aria-label="Footer contact options">
+            <a href="tel:+919999395031">Call: +91 9999395031</a>
+            <a href="https://wa.me/919999395031?text=Hi%20Adhiniyam%2C%20I%20need%20help%20with%20a%20business%20tool%20or%20compliance%20service." target="_blank" rel="noopener">WhatsApp: Message us</a>
+            <a href="mailto:enquiry@adhiniyam.com">Email: enquiry@adhiniyam.com</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Popular Tools</h4>
+          <a href="/tools/gst-calculator/">GST Calculator</a>
+          <a href="/tools/invoice-generator/">Invoice Generator</a>
+          <a href="/tools/salary-slip-generator/">Salary Slip Generator</a>
+          <a href="/tools/income-tax-calculator/">Income Tax Calculator</a>
+          <a href="/tools/offer-letter-generator/">Offer Letter Generator</a>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <a href="/services/gst-registration/">GST Registration</a>
+          <a href="/services/company-registration/">Company Registration</a>
+          <a href="/services/trademark-registration/">Trademark Registration</a>
+          <a href="/services/payroll-support/">Payroll Support</a>
+          <a href="/services/custom-business-tools/">Custom Business Tools</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Guides</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy-policy/">Privacy Policy</a>
+          <a href="/terms/">Terms & Conditions</a>
+          <a href="/refund-policy/">Refund Policy</a>
+          <a href="/disclaimer/">Disclaimer</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© Adhiniyam. All rights reserved.</span>
+        <span>Tools are for general utility and informational purposes. Verify before official use.</span>
+      </div>
+    </div>`;
+
+  const btn = document.querySelector('.menu-btn'), navWrap = document.querySelector('.nav-wrap');
+  if(btn && navWrap) {
+    btn.addEventListener('click', () => {
+      const isOpen = navWrap.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+      btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      document.body.classList.toggle('menu-open', isOpen);
+    });
+    navWrap.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      if(navWrap.classList.contains('open')) {
+        navWrap.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Open menu');
+        document.body.classList.remove('menu-open');
+      }
+    }));
+  }
   const path = location.pathname;
   document.querySelectorAll('.nav-links a').forEach(a => { const href=a.getAttribute('href'); if((href==='/'&&path==='/') || (href!=='/'&&path.startsWith(href))) a.classList.add('active'); });
   initFAQ();
