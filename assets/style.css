@@ -4470,3 +4470,149 @@ input[type="file"] {
     min-height: auto;
   }
 }
+
+/* =========================================================
+   Phase 5C: Tools page contrast fix + subtle card depth
+   Scope: Tools listing page visual refinement only. No tool logic changes.
+   ========================================================= */
+.tools-page .tools-hero-panel {
+  color: var(--text);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, .92) inset,
+    0 28px 70px rgba(0, 0, 0, .18),
+    0 10px 24px rgba(15, 30, 61, .10);
+}
+
+.tools-page .tools-panel-head {
+  color: var(--navy);
+}
+
+.tools-page .tools-panel-head .mini-badge {
+  background: #EAF1FF;
+  color: #1849B8;
+  border: 1px solid #CFE0FF;
+  box-shadow: 0 8px 18px rgba(45, 101, 243, .10);
+}
+
+.tools-page .tools-panel-list strong {
+  color: var(--navy);
+}
+
+.tools-page .tools-panel-list a,
+.tools-page .quick-tool-link,
+.tools-page .popular-tool-card,
+.tools-page #allToolsGrid .tool-card {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .98) 0%, rgba(248, 251, 255, .98) 100%);
+  border-color: rgba(191, 210, 255, .82);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, .96) inset,
+    0 14px 30px rgba(15, 30, 61, .08),
+    0 2px 7px rgba(15, 30, 61, .05);
+  transform: translateY(0);
+  will-change: transform;
+}
+
+.tools-page .tools-panel-list a::before,
+.tools-page .quick-tool-link::before,
+.tools-page .popular-tool-card::before,
+.tools-page #allToolsGrid .tool-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(45, 101, 243, .88), rgba(87, 192, 255, .62));
+  opacity: .72;
+  pointer-events: none;
+}
+
+.tools-page .tools-panel-list a:hover,
+.tools-page .quick-tool-link:hover,
+.tools-page .popular-tool-card:hover,
+.tools-page #allToolsGrid .tool-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(45, 101, 243, .34);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, .98) inset,
+    0 22px 46px rgba(15, 30, 61, .13),
+    0 8px 18px rgba(45, 101, 243, .08);
+}
+
+.tools-page .tool-code,
+.tools-page .quick-tool-link span,
+.tools-page .tools-panel-list span {
+  background: linear-gradient(180deg, #EEF4FF, #E4ECFF);
+  color: #1D4ED8;
+  border: 1px solid #D4E2FF;
+  box-shadow: 0 8px 18px rgba(45, 101, 243, .10);
+}
+
+.tools-page .quick-tool-link strong,
+.tools-page .popular-tool-card strong,
+.tools-page #allToolsGrid .tool-card h3 {
+  color: var(--navy);
+}
+
+.tools-page .quick-tool-link em,
+.tools-page .popular-tool-card em,
+.tools-page #allToolsGrid .tool-card p {
+  color: #4F5F78;
+}
+
+.tools-page .popular-tool-card b,
+.tools-page #allToolsGrid .tool-card .btn {
+  color: #1D4ED8;
+}
+
+.tools-page .popular-tool-card b:hover,
+.tools-page #allToolsGrid .tool-card .btn:hover,
+.tools-page .section-link:hover,
+.tools-page .tools-panel-head a:hover {
+  color: #123C98;
+}
+
+.tools-page .tools-directory-search .filter-tab {
+  background: #FFFFFF;
+  color: #30405A;
+  border-color: #D9E6FB;
+}
+
+.tools-page .tools-directory-search .filter-tab:hover {
+  background: #F2F6FF;
+  color: #1D4ED8;
+  border-color: #BFD2FF;
+}
+
+.tools-page .tools-directory-search .filter-tab.active {
+  background: #1D4ED8;
+  border-color: #1D4ED8;
+  color: #FFFFFF;
+  box-shadow: 0 10px 22px rgba(29, 78, 216, .18);
+}
+
+@media (max-width: 720px) {
+  .tools-page .tools-panel-list a:hover,
+  .tools-page .quick-tool-link:hover,
+  .tools-page .popular-tool-card:hover,
+  .tools-page #allToolsGrid .tool-card:hover {
+    transform: translateY(-3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tools-page .tools-panel-list a,
+  .tools-page .quick-tool-link,
+  .tools-page .popular-tool-card,
+  .tools-page #allToolsGrid .tool-card {
+    will-change: auto;
+  }
+
+  .tools-page .tools-panel-list a:hover,
+  .tools-page .quick-tool-link:hover,
+  .tools-page .popular-tool-card:hover,
+  .tools-page #allToolsGrid .tool-card:hover {
+    transform: none;
+  }
+}
