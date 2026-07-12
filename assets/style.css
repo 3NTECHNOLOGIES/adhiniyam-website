@@ -5038,3 +5038,403 @@ input[type="file"] {
     text-align: left;
   }
 }
+
+/* ==========================================================
+   Phase 6-B1: Mobile overflow hotfix for individual tool pages
+   Scope: responsive safety only. Tool IDs, formulas, PDF logic,
+   URLs and SEO remain untouched.
+   ========================================================== */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+}
+
+.site-header,
+.top-contact-bar,
+.tool-page,
+.tool-page .tool-hero,
+.tool-page .section {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.tool-page *,
+.tool-page *::before,
+.tool-page *::after {
+  min-width: 0;
+}
+
+.tool-page img,
+.tool-page svg,
+.tool-page canvas,
+.tool-page iframe {
+  max-width: 100%;
+}
+
+@media (max-width: 980px) {
+  .tool-page .container {
+    width: min(100% - 32px, var(--container));
+  }
+
+  .tool-hero-grid,
+  .tool-work-grid,
+  .tool-note-layout {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100%;
+  }
+
+  .tool-hero-copy,
+  .tool-hero-panel,
+  .tool-form-panel,
+  .tool-result-panel,
+  .tool-support-card,
+  .related-tool-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .tool-hero-panel {
+    transform: none !important;
+  }
+
+  .tool-result-panel {
+    position: static;
+    top: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .container,
+  .tool-page .container {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .top-contact-wrap,
+  .nav-wrap {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .tool-page .tool-hero {
+    padding: 42px 0 34px;
+  }
+
+  .tool-hero-copy h1,
+  .tool-hero-copy p,
+  .panel-title-row h2,
+  .tool-panel-top strong {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .tool-hero-actions .btn,
+  .tool-primary-actions .btn,
+  .tool-result-actions .btn,
+  .tool-support-actions .btn {
+    max-width: 100%;
+  }
+
+  .tool-trust-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .tool-trust-row span {
+    width: 100%;
+    white-space: normal;
+  }
+
+  .tool-panel-top,
+  .panel-title-row,
+  .tool-support-card,
+  .tool-mini-result div {
+    max-width: 100%;
+  }
+
+  .form-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+  .container,
+  .tool-page .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .tool-trust-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ==========================================================
+   Phase 6-B2: Global mobile overflow containment hotfix
+   Scope: whole-site responsive safety only. No HTML, SEO,
+   URL, form, calculator, PDF or JSON logic changes.
+   ========================================================== */
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+@supports (overflow: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
+
+*,
+*::before,
+*::after {
+  min-width: 0;
+}
+
+body > *,
+main,
+section,
+header,
+footer,
+.site-header,
+.top-contact-bar,
+.site-footer,
+.tool-page,
+.home-page,
+.tools-page {
+  max-width: 100%;
+}
+
+.container,
+.top-contact-wrap,
+.nav-wrap,
+.footer-grid,
+.hero-grid,
+.home-hero-grid,
+.minimal-hero-grid,
+.premium-hero-grid,
+.tools-hero-grid,
+.tool-hero-grid,
+.tool-work-grid,
+.grid,
+.grid-2,
+.grid-3,
+.grid-4,
+.card-grid,
+.home-card-grid,
+.home-tool-grid,
+.home-service-grid,
+.home-blog-grid,
+.home-trust-grid,
+.tools-action-grid,
+.tools-directory-grid,
+.popular-tool-grid,
+.compact-card-grid,
+.compact-path-grid,
+.compact-trust-grid,
+.premium-card-grid,
+.bento-grid,
+.showcase-grid,
+.trust-grid,
+.path-grid,
+.form-grid,
+.result-grid,
+.summary-grid,
+.tax-grid,
+.mock-grid {
+  max-width: 100%;
+}
+
+img,
+svg,
+canvas,
+video,
+iframe,
+table,
+pre,
+code {
+  max-width: 100%;
+}
+
+pre,
+table {
+  overflow-x: auto;
+}
+
+.btn,
+.button,
+.chip,
+.pill,
+.badge,
+.eyebrow,
+.section-label,
+.top-contact-link,
+.nav-links a,
+.footer-links a {
+  max-width: 100%;
+}
+
+@media (max-width: 980px) {
+  .container {
+    width: min(100% - 32px, var(--container));
+  }
+
+  .hero-grid,
+  .home-hero-grid,
+  .minimal-hero-grid,
+  .premium-hero-grid,
+  .tools-hero-grid,
+  .tool-hero-grid,
+  .tool-work-grid,
+  .footer-grid,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .bento-grid,
+  .showcase-grid,
+  .premium-card-grid,
+  .compact-path-grid,
+  .home-trust-grid,
+  .tools-action-grid,
+  .tools-directory-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .home-tool-grid,
+  .home-service-grid,
+  .home-blog-grid,
+  .popular-tool-grid,
+  .compact-card-grid,
+  .trust-grid,
+  .path-grid,
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nav-wrap.open .nav-links,
+  .nav-wrap.open .header-actions {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .top-contact-wrap,
+  .nav-wrap,
+  .hero-actions,
+  .home-hero-actions,
+  .tool-hero-actions,
+  .tool-primary-actions,
+  .tool-result-actions,
+  .tool-support-actions,
+  .section-head,
+  .tools-section-head {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .home-tool-grid,
+  .home-service-grid,
+  .home-blog-grid,
+  .popular-tool-grid,
+  .compact-card-grid,
+  .trust-grid,
+  .path-grid,
+  .card-grid,
+  .form-grid,
+  .result-grid,
+  .summary-grid,
+  .tax-grid,
+  .tools-action-grid,
+  .tools-directory-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .top-contact-wrap,
+  .top-contact-right,
+  .nav-wrap,
+  .nav-links,
+  .header-actions,
+  .hero-actions,
+  .home-hero-actions,
+  .tool-hero-actions,
+  .tool-trust-row,
+  .filter-row,
+  .tools-filter-row,
+  .footer-bottom {
+    flex-wrap: wrap;
+  }
+
+  .btn,
+  .button {
+    white-space: normal;
+  }
+
+  .brand,
+  .brand-copy,
+  .brand-tag,
+  .top-contact-link,
+  .section-head,
+  .card,
+  .tool-card,
+  .service-card,
+  .blog-card,
+  .tool-form-panel,
+  .tool-result-panel,
+  .tool-hero-panel {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .top-contact-link,
+  .chip,
+  .pill,
+  .badge,
+  .eyebrow,
+  .section-label {
+    overflow-wrap: anywhere;
+  }
+
+  .tool-trust-row,
+  .quick-action-row,
+  .filter-row,
+  .tools-filter-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
