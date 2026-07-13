@@ -7409,3 +7409,419 @@ table {
   .tile-hr { top: 76px; }
   .tile-payroll { bottom: 16px; }
 }
+
+/* Phase 3D-I: homepage hero and layout cleanup
+   Goals: simplify the right-side hero card, remove duplicated quick-action strip from HTML,
+   make trust chips more professional, and reduce excessive desktop side whitespace. */
+:root {
+  --container: 1360px;
+  --container-wide: 1480px;
+}
+
+main.home-pro,
+.blue-homepage,
+.blue-platform-hero,
+.blue-homepage .visual-section,
+.blue-homepage .home-final-cta {
+  width: 100%;
+}
+
+.blue-platform-hero {
+  padding: clamp(56px, 6vw, 76px) 0 clamp(52px, 5vw, 64px);
+}
+
+.blue-platform-hero .compliance-hero-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 470px);
+  align-items: center;
+  gap: clamp(38px, 5vw, 68px);
+}
+
+.blue-platform-hero .home-badge {
+  border-radius: 999px;
+}
+
+.blue-platform-hero h1 {
+  max-width: 720px;
+  font-size: clamp(42px, 4.35vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -.052em;
+}
+
+.blue-platform-hero .home-lead {
+  max-width: 650px;
+  color: rgba(231, 240, 255, .92);
+}
+
+.blue-platform-hero .compliance-trust-line {
+  align-items: center;
+  gap: 18px;
+}
+
+.blue-platform-hero .compliance-trust-line span {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  color: rgba(234, 242, 255, .92);
+  font-size: 14px;
+  font-weight: 850;
+}
+
+.blue-platform-hero .compliance-trust-line span::before {
+  content: "✓";
+  width: 19px;
+  height: 19px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, .18);
+  color: #34D399;
+  font-size: 12px;
+  font-weight: 950;
+  box-shadow: none;
+}
+
+.workspace-preview-panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 470px);
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, .58);
+  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.98), rgba(244,248,255,.95));
+  color: #071A3D;
+  box-shadow: 0 28px 86px rgba(0, 13, 42, .26);
+  overflow: hidden;
+}
+
+.workspace-preview-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: linear-gradient(90deg, #60A5FA, #20B486, #F59E0B);
+}
+
+.workspace-preview-panel::after {
+  content: "";
+  position: absolute;
+  right: -72px;
+  top: 52px;
+  width: 190px;
+  height: 190px;
+  border-radius: 999px;
+  background: rgba(45, 101, 243, .08);
+  pointer-events: none;
+}
+
+.workspace-panel-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #DDE9FF;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, .88);
+}
+
+.workspace-panel-top .panel-kicker,
+.workspace-panel-top strong {
+  display: block;
+}
+
+.workspace-panel-top .panel-kicker {
+  color: #0E9F6E;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.workspace-panel-top strong {
+  max-width: 300px;
+  margin-top: 5px;
+  color: #071A3D;
+  font-size: 18px;
+  line-height: 1.24;
+  letter-spacing: -.025em;
+}
+
+.workspace-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: #EAFBF3;
+  color: #047857;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.workspace-status::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #10B981;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, .15);
+}
+
+.workspace-document-card {
+  position: relative;
+  z-index: 2;
+  margin-top: 16px;
+  padding: 18px;
+  border: 1px solid #D6E5FF;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, #FFFFFF, #F7FAFF);
+  box-shadow: 0 18px 46px rgba(12, 44, 109, .10);
+}
+
+.workspace-document-card::before {
+  content: "";
+  position: absolute;
+  inset: 13px;
+  border: 1px dashed rgba(45, 101, 243, .18);
+  border-radius: 19px;
+  pointer-events: none;
+}
+
+.workspace-doc-head {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.doc-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  background: #EAF1FF;
+  color: #1557D7;
+  font-size: 11px;
+  font-weight: 950;
+}
+
+.workspace-doc-head strong,
+.workspace-doc-head small {
+  display: block;
+}
+
+.workspace-doc-head strong {
+  font-size: 16px;
+  line-height: 1.22;
+  color: #071A3D;
+}
+
+.workspace-doc-head small {
+  margin-top: 3px;
+  color: #64748B;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.workspace-doc-head em {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #ECFDF5;
+  color: #047857;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 950;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.workspace-doc-lines {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 8px;
+  margin: 20px 0 16px;
+}
+
+.workspace-doc-lines span {
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+  background: #E6EEFF;
+}
+
+.workspace-doc-lines span:nth-child(1) { width: 88%; }
+.workspace-doc-lines span:nth-child(2) { width: 70%; }
+.workspace-doc-lines span:nth-child(3) { width: 52%; }
+
+.workspace-doc-tags {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.workspace-doc-tags span {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #EEF5FF;
+  color: #15345D;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.workspace-task-list {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.workspace-task-list a {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #DDE9FF;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .84);
+  color: #071A3D;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.workspace-task-list a:hover {
+  transform: translateY(-2px);
+  border-color: #AFC8FF;
+  background: #FFFFFF;
+  box-shadow: 0 16px 38px rgba(12, 44, 109, .11);
+}
+
+.workspace-task-list a > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 15px;
+  background: #EAF1FF;
+  color: #1557D7;
+  font-size: 11px;
+  font-weight: 950;
+}
+
+.workspace-task-list strong,
+.workspace-task-list small {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.workspace-task-list strong {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.workspace-task-list small {
+  margin-top: 3px;
+  color: #64748B;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.workspace-task-list b {
+  color: #1557D7;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+/* Remove visual gap left by the deleted duplicate quick-action strip. */
+.blue-homepage .home-tools-preview {
+  padding-top: 58px;
+}
+
+@media (max-width: 1100px) {
+  .blue-platform-hero .compliance-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .workspace-preview-panel {
+    width: min(100%, 640px);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --container: 1160px;
+    --container-wide: 1240px;
+  }
+
+  .blue-platform-hero .compliance-trust-line {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .blue-platform-hero .compliance-trust-line span {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .workspace-preview-panel {
+    padding: 16px;
+    border-radius: 24px;
+  }
+
+  .workspace-panel-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .workspace-panel-top strong {
+    max-width: none;
+    font-size: 16px;
+  }
+
+  .workspace-status {
+    width: max-content;
+  }
+
+  .workspace-doc-head {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+
+  .workspace-doc-head em {
+    grid-column: 1 / -1;
+    width: max-content;
+  }
+
+  .doc-mark,
+  .workspace-task-list a > span {
+    width: 40px;
+    height: 40px;
+  }
+
+  .workspace-task-list a {
+    grid-template-columns: 40px minmax(0, 1fr);
+  }
+
+  .workspace-task-list b {
+    display: none;
+  }
+}
