@@ -10236,3 +10236,287 @@ body:has(.light-workspace-home) {
     transform-origin: center top;
   }
 }
+
+
+/* Phase 3D-N1: Homepage mobile cutting / overflow hotfix
+   Keeps the integrated hero visual but forces safe mobile containment. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body,
+.site-header,
+main,
+section,
+.container,
+.mockup-hero,
+.mockup-hero-grid,
+.mockup-proof-strip,
+.home-section {
+  max-width: 100%;
+}
+
+.mockup-hero,
+.home-pro.light-workspace-home {
+  overflow-x: clip;
+}
+
+.mockup-hero-grid,
+.mockup-proof-strip {
+  box-sizing: border-box;
+}
+
+.native-doc-visual,
+.native-doc-stage,
+.native-folder,
+.native-paper {
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .mockup-hero-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: min(100% - 32px, 720px) !important;
+    gap: 28px !important;
+  }
+
+  .mockup-hero-copy,
+  .mockup-hero-lead,
+  .mockup-trust-row {
+    max-width: 100% !important;
+  }
+
+  .native-doc-visual {
+    width: 100% !important;
+    min-height: 390px !important;
+    overflow: hidden !important;
+    border-radius: 28px;
+  }
+
+  .native-doc-stage {
+    width: min(100%, 390px) !important;
+    min-height: 370px !important;
+    margin: 0 auto !important;
+    transform: none !important;
+  }
+
+  .folder-back {
+    width: 260px !important;
+    height: 315px !important;
+    right: 16px !important;
+    top: 18px !important;
+    border-radius: 22px !important;
+  }
+
+  .folder-front {
+    width: 270px !important;
+    height: 300px !important;
+    right: 48px !important;
+    top: 44px !important;
+    border-radius: 22px !important;
+  }
+
+  .native-invoice {
+    width: 275px !important;
+    min-height: 300px !important;
+    right: 42px !important;
+    top: 38px !important;
+    padding: 22px 20px !important;
+    border-radius: 22px !important;
+  }
+
+  .native-salary,
+  .native-hr,
+  .native-legal {
+    width: 154px !important;
+    min-height: 92px !important;
+    padding: 12px !important;
+    border-radius: 15px !important;
+  }
+
+  .native-salary { right: 8px !important; top: 178px !important; }
+  .native-hr { left: 4px !important; top: 190px !important; }
+  .native-legal { left: 92px !important; bottom: 10px !important; }
+}
+
+@media (max-width: 520px) {
+  .mockup-hero {
+    padding-top: 34px !important;
+    padding-bottom: 28px !important;
+  }
+
+  .mockup-hero-grid,
+  .mockup-proof-strip {
+    width: min(100% - 24px, 440px) !important;
+  }
+
+  .mockup-hero h1 {
+    font-size: clamp(31px, 9.5vw, 39px) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -.048em !important;
+  }
+
+  .mockup-hero-lead {
+    font-size: 15.5px !important;
+    line-height: 1.5 !important;
+  }
+
+  .mockup-hero-actions {
+    width: 100% !important;
+  }
+
+  .mockup-hero-actions .btn {
+    width: 100% !important;
+    min-height: 50px !important;
+  }
+
+  .mockup-trust-row {
+    gap: 8px !important;
+  }
+
+  .native-doc-visual {
+    min-height: 320px !important;
+    margin-top: 6px !important;
+  }
+
+  .native-doc-stage {
+    width: min(100%, 320px) !important;
+    min-height: 310px !important;
+    transform: none !important;
+  }
+
+  .folder-back {
+    width: 218px !important;
+    height: 262px !important;
+    right: 18px !important;
+    top: 14px !important;
+  }
+
+  .folder-front {
+    width: 226px !important;
+    height: 248px !important;
+    right: 44px !important;
+    top: 36px !important;
+  }
+
+  .native-invoice {
+    width: 226px !important;
+    min-height: 252px !important;
+    right: 38px !important;
+    top: 30px !important;
+    padding: 18px 16px !important;
+  }
+
+  .native-invoice h3 {
+    font-size: 16px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .native-logo-mark {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 13px !important;
+  }
+
+  .native-doc-label {
+    padding: 6px 9px !important;
+    font-size: 10px !important;
+  }
+
+  .native-lines {
+    gap: 8px !important;
+  }
+
+  .native-lines span {
+    height: 7px !important;
+  }
+
+  .native-table {
+    gap: 5px !important;
+    margin-top: 17px !important;
+  }
+
+  .native-table span {
+    height: 24px !important;
+  }
+
+  .native-stamp {
+    width: 66px !important;
+    height: 66px !important;
+    right: 14px !important;
+    bottom: 14px !important;
+    font-size: 9px !important;
+    border-width: 2px !important;
+  }
+
+  .native-stamp::after {
+    font-size: 17px !important;
+    bottom: 8px !important;
+  }
+
+  .native-salary,
+  .native-hr,
+  .native-legal {
+    width: 128px !important;
+    min-height: 76px !important;
+    padding: 10px !important;
+    border-radius: 14px !important;
+  }
+
+  .native-salary strong,
+  .native-hr strong,
+  .native-legal strong {
+    font-size: 12px !important;
+    margin: 7px 0 6px !important;
+  }
+
+  .native-salary { right: 2px !important; top: 157px !important; }
+  .native-hr { left: 2px !important; top: 168px !important; }
+  .native-legal { left: 78px !important; bottom: 8px !important; }
+
+  .native-pen,
+  .native-paperclip,
+  .mh-doc-left,
+  .mh-ring-two {
+    display: none !important;
+  }
+
+  .mockup-proof-strip {
+    grid-template-columns: 1fr !important;
+    padding: 14px !important;
+    gap: 10px !important;
+  }
+
+  .mockup-proof-item {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .mockup-hero-grid,
+  .mockup-proof-strip {
+    width: min(100% - 20px, 340px) !important;
+  }
+
+  .native-doc-stage {
+    width: 292px !important;
+    min-height: 292px !important;
+  }
+
+  .native-doc-visual {
+    min-height: 300px !important;
+  }
+
+  .folder-back { width: 198px !important; height: 238px !important; right: 13px !important; }
+  .folder-front { width: 206px !important; height: 230px !important; right: 36px !important; }
+  .native-invoice { width: 206px !important; min-height: 230px !important; right: 32px !important; }
+
+  .native-salary,
+  .native-hr,
+  .native-legal {
+    display: none !important;
+  }
+}
